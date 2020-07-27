@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:myportfolio/pages/about_page.dart';
-import 'package:myportfolio/pages/home_page.dart';
-import 'package:myportfolio/pages/projects_page.dart';
+import 'package:myportfolio/screens/about/views/about_page.dart';
+import 'package:myportfolio/screens/home/views/home_page.dart';
+import 'package:myportfolio/screens/projects/views/projects_page.dart';
 
 void main() => runApp(MyApp());
 
+//TODO: Set font as Monsterrat
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -14,22 +15,21 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark(),
       home: SafeArea(
         child: Scaffold(
-          body: SingleChildScrollView(  
-            child: Center(
-              child: FittedBox(
+            body: SingleChildScrollView(
+          child: Center(
+            child: FittedBox(
               child: Column(
-                  children: <Widget>[
-                    HomePage(),
-                    ProjectPage(),
-                    AboutPage(),
-                    AboutPage(),
-                    AboutPage(),                                        
-                  ],
-                ),
+                children: <Widget>[
+                  HomePage(),
+                  ProjectPage(),
+                  AboutPage(),
+                  AboutPage(),
+                  AboutPage(),
+                ],
               ),
             ),
-          )
-        ),
+          ),
+        )),
       ),
     );
   }
