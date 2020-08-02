@@ -9,24 +9,28 @@ class ProjectPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      constraints: BoxConstraints(minWidth: 400, maxWidth: maxWidthPage),
       height: sectionHeight,
       child: Column(
         children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Text(
-                "Recent Projects",
-                style: kTitleTextStyle,
-              ),
-              Text(
-                "View All",
-                style: kSubTitleTextStyle,
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: kMarginXL),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Text(
+                  RECENT_PROJECTS,
+                  style: kTitleTextStyle,
+                ),
+                Text(
+                  VIEW_ALL,
+                  style: kSubTitleTextStyle,
+                ),
+              ],
+            ),
           ),
-          ProjectItems(),
+          ProjectItem(),
         ],
       ),
     );

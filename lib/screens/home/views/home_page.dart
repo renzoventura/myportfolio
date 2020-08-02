@@ -21,43 +21,50 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            "Renzo Ventura",
+            PORTFOLIO_NAME,
             style: kTitleTextStyle,
           ),
           Text(
-            "SOFTWARE DEVELOPER",
+            POSITION_TITLE,
             style: kSubTitleTextStyle,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              RotateAnimatedTextKit(
-                textAlign: TextAlign.center,
-                text: kLanguages,
-                textStyle: kLanguagesTextStyle,
-                isRepeatingAnimation: true,
-                totalRepeatCount: 100,
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: kMarginS),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                RotateAnimatedTextKit(
+                  textAlign: TextAlign.center,
+                  text: kLanguages,
+                  textStyle: kLanguagesTextStyle,
+                  isRepeatingAnimation: true,
+                  totalRepeatCount: 100,
+                ),
+              ],
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               ContactDetailItem(
-                iconData: CommunityMaterialIcons.github_box,
-                url: kGithubUrl,
+                CommunityMaterialIcons.github_box,
+                kGithubUrl,
+                GITHUB,
               ),
               ContactDetailItem(
-                iconData: CommunityMaterialIcons.linkedin_box,
-                url: kLinkedInUrl,
+                CommunityMaterialIcons.linkedin_box,
+                kLinkedInUrl,
+                LINKED_IN,
               ),
               ContactDetailItem(
-                iconData: CommunityMaterialIcons.file_document_box,
-                url: kLinkedInUrl,
+                CommunityMaterialIcons.file_document_box,
+                kLinkedInUrl,
+                CV,
               ),
               ContactDetailItem(
-                iconData: CommunityMaterialIcons.account_box_outline,
-                url: kLinkedInUrl,
+                CommunityMaterialIcons.account_box_outline,
+                kLinkedInUrl,
+                ABOUT_ME,
               ),
             ],
           ),
@@ -66,4 +73,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
