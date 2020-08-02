@@ -2,18 +2,15 @@ import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:myportfolio/constants/constants.dart';
 
-class ProjectItems extends StatelessWidget {
-  const ProjectItems({Key key}) : super(key: key);
+class ProjectItem extends StatelessWidget {
+  const ProjectItem({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 100,
       width: sectionHeight,
-      padding: EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(20.0)),
-        color: Colors.grey,
-      ),
+      padding: EdgeInsets.all(kMargin),
+      decoration: kProjectTile,
       child: Row(
         children: <Widget>[
           Expanded(
@@ -40,16 +37,12 @@ class ProjectItems extends StatelessWidget {
                     ),
                     Row(
                       children: <Widget>[
-                        Icon(CommunityMaterialIcons.github_box),
-                        Icon(CommunityMaterialIcons.github_box),
-                        Icon(CommunityMaterialIcons.github_box),
+//                        Icon(CommunityMaterialIcons.github_box),
+//                        Icon(CommunityMaterialIcons.github_box),
+//                        Icon(CommunityMaterialIcons.github_box),
                       ],
                     )
                   ],
-                ),
-                Expanded(
-                  child: Image.network(
-                      'https://cdn.imgbin.com/1/15/16/imgbin-java-logo-programming-language-java-plum-uE6BW7Rz08j2cF7cY58kmJ3F8.jpg'),
                 ),
                 Text(
                   "Fullstack",
@@ -63,4 +56,3 @@ class ProjectItems extends StatelessWidget {
     );
   }
 }
-

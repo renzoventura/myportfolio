@@ -5,8 +5,8 @@ import 'package:myportfolio/service/launch_url_service.dart';
 class ContactDetailItem extends StatelessWidget {
   final IconData iconData;
   final String url;
-
-  ContactDetailItem({this.iconData, this.url});
+  final String title;
+  ContactDetailItem(this.iconData, this.url, this.title);
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +16,19 @@ class ContactDetailItem extends StatelessWidget {
         onTap: () {
           launchURL(url);
         },
-        child: Icon(
-          iconData,
-          size: 50,
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: kMarginXS),
+              child: Icon(
+                iconData,
+                size: 50,
+              ),
+            ),
+            Text(
+              title,
+            )
+          ],
         ),
       ),
     );
