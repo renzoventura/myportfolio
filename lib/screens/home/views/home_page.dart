@@ -10,19 +10,42 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    toGitHub() => launchURL(kGithubUrl);
+
+    toLinkedIn() => launchURL(kGithubUrl);
+
+    displayCV() => launchURL(kGithubUrl);
+
+    navigateToAboutMe() => launchURL(kGithubUrl);
+
     return Container(
       padding: EdgeInsets.only(
-        top: 200,
-        left: 30,
-        right: 30,
+        top: 150,
         bottom: 100,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text(
-            PORTFOLIO_NAME,
-            style: kTitleTextStyle,
+          CircleAvatar(
+            minRadius: 24,
+            maxRadius: 104,
+            backgroundColor: Colors.white,
+            child: CircleAvatar(
+              minRadius: 20,
+              maxRadius: 100,
+              child: ClipOval(
+                child: Image(
+                  image: AssetImage('assets/images/avatar.jpg'),
+                ),
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: kMargin),
+            child: Text(
+              PORTFOLIO_NAME,
+              style: kTitleTextStyle,
+            ),
           ),
           Text(
             POSITION_TITLE,
@@ -44,26 +67,26 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               ContactDetailItem(
                 CommunityMaterialIcons.github_box,
-                kGithubUrl,
+                toGitHub,
                 GITHUB,
               ),
               ContactDetailItem(
                 CommunityMaterialIcons.linkedin_box,
-                kLinkedInUrl,
+                toLinkedIn,
                 LINKED_IN,
               ),
               ContactDetailItem(
                 CommunityMaterialIcons.file_document_box,
-                kLinkedInUrl,
+                displayCV,
                 CV,
               ),
               ContactDetailItem(
                 CommunityMaterialIcons.account_box_outline,
-                kLinkedInUrl,
+                navigateToAboutMe,
                 ABOUT_ME,
               ),
             ],

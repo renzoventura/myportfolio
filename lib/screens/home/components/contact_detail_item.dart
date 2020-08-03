@@ -4,18 +4,16 @@ import 'package:myportfolio/service/launch_url_service.dart';
 
 class ContactDetailItem extends StatelessWidget {
   final IconData iconData;
-  final String url;
+  final Function onTap;
   final String title;
-  ContactDetailItem(this.iconData, this.url, this.title);
+  ContactDetailItem(this.iconData, this.onTap, this.title);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kMarginL),
+      padding: const EdgeInsets.symmetric(horizontal: kMarginS),
       child: InkWell(
-        onTap: () {
-          launchURL(url);
-        },
+        onTap: onTap,
         child: Column(
           children: [
             Padding(

@@ -1,33 +1,38 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-final kTitleTextStyle = GoogleFonts.openSans(
-  textStyle: TextStyle(
-    fontSize: 52,
-    letterSpacing: 4,
-  ),
+final kTitleTextStyle = TextStyle(
+  fontSize: 56,
+  letterSpacing: 5,
+  fontWeight: FontWeight.w400,
 );
 
-final kSubTitleTextStyle = GoogleFonts.openSans(
-  textStyle: TextStyle(
-    fontSize: 24,
-    letterSpacing: 3,
-  ),
+final kSubTitleTextStyle = TextStyle(
+  fontSize: 24,
+  letterSpacing: 3,
+  fontWeight: FontWeight.bold,
 );
 
-final kLanguagesTextStyle = GoogleFonts.openSans(
-  textStyle: TextStyle(
-    fontSize: 20,
-  ),
+final kLanguagesTextStyle = TextStyle(
+  fontSize: 20,
 );
 
-final kCircleAvatarChildTextStyle = GoogleFonts.openSans(
-  textStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+final kCircleAvatarChildTextStyle = TextStyle(
+  fontSize: 20,
+  fontWeight: FontWeight.bold,
 );
 
-final BoxDecoration kProjectTile =  BoxDecoration(
+final kRecentProjectsStyle = TextStyle(
+  fontSize: 28,
+);
+
+final kViewAllStyle = TextStyle(
+  fontSize: 16,
+);
+
+final BoxDecoration kProjectTile = BoxDecoration(
   borderRadius: BorderRadius.all(
-    Radius.circular(20.0),
+    Radius.circular(10.0),
   ),
   color: Colors.grey,
 );
@@ -52,13 +57,11 @@ const double kMarginXXXXL = 36.0;
 
 const double kMarginLL = 64.0;
 
-
 const double sectionHeight = 700.0;
-
 const double maxWidthPage = 1200;
 
 const String POSITION_TITLE = "SOFTWARE DEVELOPER";
-const String PORTFOLIO_NAME = "Renzo Ventura";
+const String PORTFOLIO_NAME = "RENZO VENTURA";
 const String RECENT_PROJECTS = "Recent Projects";
 const String VIEW_ALL = "View All";
 const String GITHUB = "Github";

@@ -26,15 +26,23 @@ class MyApp extends StatelessWidget {
         child: Scaffold(
             body: Container(
           padding: EdgeInsets.symmetric(horizontal: kMarginLL),
-          child: SingleChildScrollView(
-            child: Column(
-              children: <Widget>[
-                HomePage(),
-                ProjectPage(),
+          child: Center(
+            child: SingleChildScrollView(
+              child: ConstrainedBox(
+                constraints: new BoxConstraints(
+                  minWidth: 400.0,
+                  maxWidth: 1000.0,
+                ),
+                child: Column(
+                  children: <Widget>[
+                    HomePage(),
+                    ProjectPage(),
 //                AboutPage(),
 //                AboutPage(),
 //                AboutPage(),
-              ],
+                  ],
+                ),
+              ),
             ),
           ),
         )),
