@@ -21,11 +21,11 @@ class ProjectPage extends StatelessWidget {
               children: [
                 Text(
                   RECENT_PROJECTS,
-                  style: kTitleTextStyle,
+                  style: kRecentProjectsStyle,
                 ),
                 Text(
                   VIEW_ALL,
-                  style: kSubTitleTextStyle,
+                  style: kViewAllStyle,
                 ),
               ],
             ),
@@ -36,4 +36,3 @@ class ProjectPage extends StatelessWidget {
     );
   }
 }
-
