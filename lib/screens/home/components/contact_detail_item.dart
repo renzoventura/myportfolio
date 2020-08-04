@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:myportfolio/constants/constants.dart';
-import 'package:myportfolio/service/launch_url_service.dart';
 
 class ContactDetailItem extends StatelessWidget {
   final IconData iconData;
@@ -11,13 +10,16 @@ class ContactDetailItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kMarginS),
+      padding: const EdgeInsets.symmetric(horizontal: kMarginXS),
       child: InkWell(
         onTap: onTap,
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(vertical: kMarginXS),
+              padding: const EdgeInsets.symmetric(
+                vertical: kMarginXS,
+                horizontal: kMarginXS,
+              ),
               child: Icon(
                 iconData,
                 size: 50,

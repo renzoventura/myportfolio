@@ -27,11 +27,11 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           CircleAvatar(
-            minRadius: 24,
+            minRadius: 20,
             maxRadius: 104,
             backgroundColor: Colors.white,
             child: CircleAvatar(
-              minRadius: 20,
+              minRadius: 16,
               maxRadius: 100,
               child: ClipOval(
                 child: Image(
@@ -44,11 +44,13 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: kMargin),
             child: Text(
               PORTFOLIO_NAME,
+              textAlign: TextAlign.center,
               style: kTitleTextStyle,
             ),
           ),
           Text(
             POSITION_TITLE,
+            textAlign: TextAlign.center,
             style: kSubTitleTextStyle,
           ),
           Padding(
