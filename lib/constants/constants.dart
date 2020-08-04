@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 final kTitleTextStyle = TextStyle(
   fontSize: 56,
@@ -30,11 +29,14 @@ final kViewAllStyle = TextStyle(
   fontSize: 16,
 );
 
+final kProjectTitleStyle = TextStyle(
+  fontSize: 16,
+);
+
 final BoxDecoration kProjectTile = BoxDecoration(
   borderRadius: BorderRadius.all(
     Radius.circular(10.0),
   ),
-  color: Colors.grey,
 );
 
 String kGithubUrl = "https://github.com/renzoventura";
