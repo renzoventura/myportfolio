@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:myportfolio/screens/about/views/about_page.dart';
 import 'package:myportfolio/screens/base/views/base_screen.dart';
 
 void main() => runApp(MyApp());
@@ -18,7 +19,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Renzo Ventura',
       theme: myTheme,
-      home: BaseScreen(),
+//      home: BaseScreen(),
+      initialRoute: BaseScreen.id,
+      routes: {
+        BaseScreen.id: (context) => BaseScreen(),
+        AboutPage.id: (context) => AboutPage(),
+      },
     );
   }
 }

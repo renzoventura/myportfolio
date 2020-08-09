@@ -1,53 +1,42 @@
 import 'package:flutter/material.dart';
 
+//Material Styles
 final kTitleTextStyle = TextStyle(
   fontSize: 56,
   letterSpacing: 5,
   fontWeight: FontWeight.w400,
 );
-
 final kSubTitleTextStyle = TextStyle(
   fontSize: 24,
   letterSpacing: 3,
   fontWeight: FontWeight.bold,
 );
-
 final kLanguagesTextStyle = TextStyle(
   fontSize: 20,
 );
-
 final kCircleAvatarChildTextStyle = TextStyle(
   fontSize: 20,
   fontWeight: FontWeight.bold,
 );
-
 final kRecentProjectsStyle = TextStyle(
   fontSize: 28,
 );
-
 final kViewAllStyle = TextStyle(
   fontSize: 16,
 );
-
 final kProjectTitleStyle = TextStyle(
+  fontSize: 24,
+);
+final kProjectTitleDescription = TextStyle(
   fontSize: 16,
 );
-
 final BoxDecoration kProjectTile = BoxDecoration(
   borderRadius: BorderRadius.all(
     Radius.circular(10.0),
   ),
 );
 
-String kGithubUrl = "https://github.com/renzoventura";
-String kLinkedInUrl = "https://www.linkedin.com/in/renzoventura/";
-
-const List<String> kLanguages = [
-  'Java ☕ Springboot 🍃',
-  'Angular 🅰️️',
-  'Flutter Dart 🎯',
-];
-
+//margins
 const double kMarginXS = 8.0;
 const double kMarginS = 12.0;
 const double kMargin = 16.0;
@@ -57,11 +46,27 @@ const double kMarginXXL = 28.0;
 const double kMarginXXXL = 32.0;
 const double kMarginXXXXL = 36.0;
 
+//large margins
 const double kMarginLL = 64.0;
 
+//page sizes
 const double sectionHeight = 700.0;
+const double minWidthPage = 400;
 const double maxWidthPage = 1200;
+const double topPagePadding = 150;
 
+//section padding
+const double bottomSectionPadding = 100;
+
+
+
+//object sizes
+const double circleAvatarMinRadius = 16.0;
+const double circleAvatarMaxRadius = 100.0;
+const double circleAvatarBackgroundMinRadius = 20.0;
+const double circleAvatarBackgroundMaxRadius = 104.0;
+
+//labels
 const String POSITION_TITLE = "SOFTWARE DEVELOPER";
 const String PORTFOLIO_NAME = "RENZO VENTURA";
 const String RECENT_PROJECTS = "Recent Projects";
@@ -70,3 +75,35 @@ const String GITHUB = "Github";
 const String LINKED_IN = "LinkedIn";
 const String CV = "CV";
 const String ABOUT_ME = "About Me";
+
+enum ProjectLinkType {
+  GITHUB,
+  YOUTUBE,
+  DEMO,
+}
+
+//technologies
+const String DART = "Dart";
+const String FLUTTER = "Flutter";
+const String FLUTTER_WEB = "Flutter WEB";
+const String JAVA = "Java";
+const String SPRING_BOOT = "Springboot";
+const String ANGULAR2 = "Angular 2";
+const String GODOT = "Godot Game Engine";
+const String AWS = "Amazon Web Services";
+
+//hero tags
+const String AVATAR_TAG = "avatar";
+const String NAME_TAG = "name";
+const String JOB_TITLE_TAG = "jobTitle";
+
+//url
+String kGithubUrl = "https://github.com/renzoventura";
+String kLinkedInUrl = "https://www.linkedin.com/in/renzoventura/";
+
+//technologies display
+const List<String> kLanguages = [
+  'Java ☕ Springboot 🍃',
+  'Angular 🅰️️',
+  'Flutter Dart 🎯',
+];

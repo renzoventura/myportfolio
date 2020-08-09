@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myportfolio/constants/constant_projects.dart';
 import 'package:myportfolio/constants/constants.dart';
 import 'package:myportfolio/screens/projects/components/project_item_list.dart';
 
@@ -8,7 +9,7 @@ class ProjectPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(minWidth: 400, maxWidth: maxWidthPage),
+      constraints: BoxConstraints(minWidth: minWidthPage, maxWidth: maxWidthPage),
       height: sectionHeight,
       child: Column(
         children: <Widget>[
@@ -29,7 +30,11 @@ class ProjectPage extends StatelessWidget {
               ],
             ),
           ),
-          ProjectItem(),
+          Expanded(
+            child: ListView.builder(
+                itemCount: projects.length,
+                itemBuilder: (BuildContext context, int index) => ProjectItem(projects[index])),
+          ),
         ],
       ),
     );
