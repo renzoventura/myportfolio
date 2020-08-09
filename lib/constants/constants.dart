@@ -70,3 +70,16 @@ const String GITHUB = "Github";
 const String LINKED_IN = "LinkedIn";
 const String CV = "CV";
 const String ABOUT_ME = "About Me";
+
+enum ProjectLinkType{
+  GITHUB,
+  YOUTUBE,
+  DEMO,
+}
+
+const String DART = "Dart";
+const String FLUTTER = "Flutter";
+const String JAVA = "Java";
+const String SPRING_BOOT = "Springboot";
+const String ANGULAR2 = "Angular 2";
+

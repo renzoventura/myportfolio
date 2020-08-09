@@ -1,10 +1,12 @@
 import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:myportfolio/constants/constants.dart';
+import 'package:myportfolio/models/project.dart';
 
 //TODO: Remove hardcoded values
 class ProjectItem extends StatefulWidget {
-  const ProjectItem({Key key}) : super(key: key);
+  final Project project;
+  const ProjectItem(this.project);
 
   @override
   _ProjectItemState createState() => _ProjectItemState();
@@ -49,12 +51,12 @@ class _ProjectItemState extends State<ProjectItem> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    "Glowd",
+                    widget.project.title,
                     textAlign: TextAlign.left,
                     style: kProjectTitleStyle,
                   ),
                   Text(
-                    'IoT cross platform iOS/Android app that can control your home smart lights.',
+                    widget.project.shortDescription,
                     style: kProjectTitleStyle,
                   ),
                 ],
