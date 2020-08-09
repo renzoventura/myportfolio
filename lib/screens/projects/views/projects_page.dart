@@ -9,7 +9,7 @@ class ProjectPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(minWidth: 400, maxWidth: maxWidthPage),
+      constraints: BoxConstraints(minWidth: minWidthPage, maxWidth: maxWidthPage),
       height: sectionHeight,
       child: Column(
         children: <Widget>[

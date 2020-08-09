@@ -1,8 +1,11 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
+import 'package:myportfolio/components/hero_text.dart';
 import 'package:myportfolio/constants/constants.dart';
-import 'package:myportfolio/screens/home/components/contact_detail_item.dart';
+import 'package:myportfolio/screens/about/views/about_page.dart';
+import 'package:myportfolio/screens/title/components/contact_detail_item.dart';
+import 'package:myportfolio/service/image_utils.dart';
 import 'package:myportfolio/service/launch_url_service.dart';
 
 class HomePage extends StatelessWidget {
@@ -12,46 +15,50 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     toGitHub() => launchURL(kGithubUrl);
 
-    toLinkedIn() => launchURL(kGithubUrl);
+    toLinkedIn() => launchURL(kLinkedInUrl);
 
     displayCV() => launchURL(kGithubUrl);
 
-    navigateToAboutMe() => launchURL(kGithubUrl);
+    navigateToAboutMe() => Navigator.pushNamed(context, AboutPage.id);
 
     return Container(
       padding: EdgeInsets.only(
-        top: 150,
-        bottom: 100,
+        bottom: bottomSectionPadding,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          CircleAvatar(
-            minRadius: 20,
-            maxRadius: 104,
-            backgroundColor: Colors.white,
+          Hero(
+            tag: AVATAR_TAG,
             child: CircleAvatar(
-              minRadius: 16,
-              maxRadius: 100,
-              child: ClipOval(
-                child: Image(
-                  image: AssetImage('assets/images/avatar.jpg'),
+              minRadius: circleAvatarBackgroundMinRadius,
+              maxRadius: circleAvatarBackgroundMaxRadius,
+              backgroundColor: Colors.white,
+              child: CircleAvatar(
+                minRadius: circleAvatarMinRadius,
+                maxRadius: circleAvatarMaxRadius,
+                child: ClipOval(
+                  child: Image(
+                    image: AssetImage(ImageUtils.avatar),
+                  ),
                 ),
               ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: kMargin),
-            child: Text(
-              PORTFOLIO_NAME,
-              textAlign: TextAlign.center,
+            child: HeroText(
+              tag: NAME_TAG,
+              text: PORTFOLIO_NAME,
               style: kTitleTextStyle,
+              align: TextAlign.center,
             ),
           ),
-          Text(
-            POSITION_TITLE,
-            textAlign: TextAlign.center,
+          HeroText(
+            tag: JOB_TITLE_TAG,
+            text: POSITION_TITLE,
             style: kSubTitleTextStyle,
+            align: TextAlign.center,
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: kMarginS),
