@@ -19,6 +19,10 @@ Project glowd = Project(
     DART,
     FLUTTER,
   ],
+  features: [
+    "Feature 1",
+    "Feature 2",
+  ],
 );
 
 Project relit = Project(
@@ -28,6 +32,10 @@ Project relit = Project(
       "Built using the Godot Game Engine, I developed a 2 dimensional platformer that can interact with different environments based on current stats. \n \n" +
           "Bio: You are the bridge between light and dark. But before saving the world can you escape dungeon split between the two dimensions?! \n Use your powers to switch between light and dark forms to escape and fulfill your destiny!",
   logoImage: "relitFilePath",
+  features: [
+    "Feature 1",
+    "Feature 2",
+  ],
   projectLink: [
     ProjectLink(
       link: "https://github.com/renzoventura/Relit",
@@ -50,7 +58,7 @@ Project financialMeet = Project(
   shortDescription:
       "Fullstack Web platform that focuses on connecting people with financial advisors to meet their financial goals.",
   longDescription:
-      "A paltform that helps users connect with financial advisors, to help them with their needs or financial goals. \n\nUsers can track current states of their financial journey. \nBackend built with Java SpringBoot Restful API and Frontend built with Angular7. \n Implemented role based authentications for APIs using JWT and router guards for front end security. \n Deployed testing and production environemnts using AWS. EC2 for backend, S3 for frontend and RDS for MYSQL database.",
+      "A paltform that helps users connect with financial advisors, to help them with their needs or financial goals.",
   logoImage: "financialMeetFilePath",
   projectLink: [
     ProjectLink(
@@ -68,6 +76,12 @@ Project financialMeet = Project(
     JAVA,
     SPRING_BOOT,
     AWS,
+  ],
+  features: [
+    "Users can track current states of their financial journey.",
+    "Backend built with Java SpringBoot Restful API and Frontend built with Angular7.",
+    "Implemented role based authentications for APIs using JWT and router guards for front end security.",
+    "Deployed testing and production environment using AWS. EC2 for backend, S3 for frontend and RDS for MYSQL database."
   ],
 );
 
@@ -94,6 +108,10 @@ Project portfolio = Project(
     JAVA,
     SPRING_BOOT,
     AWS,
+  ],
+  features: [
+    "Feature 1",
+    "Feature 2",
   ],
 );
 

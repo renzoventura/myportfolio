@@ -1,11 +1,9 @@
 import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:myportfolio/components/hero_text.dart';
 import 'package:myportfolio/components/screen_widget.dart';
 import 'package:myportfolio/constants/constants.dart';
 import 'package:myportfolio/models/project.dart';
-import 'package:sprintf/sprintf.dart';
 
 class ProjectPage extends StatelessWidget {
   static const id = "/project/";
@@ -18,14 +16,44 @@ class ProjectPage extends StatelessWidget {
     List<Widget> technologies = [];
     for (String tech in project.technologies) {
       technologies.add(
-        Padding(
-          padding: EdgeInsets.only(
-            left: kMarginS,
-          ),
-          child: Text(
-            sprintf(BULLET_POINT_FORMAT, [tech]),
-            style: kProjectPageTechnologyStyle,
-          ),
+        Row(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: kMarginS),
+              child: Text(
+                BULLET_POINT,
+                style: kBulletPoint,
+              ),
+            ),
+            Expanded(
+              child: Text(
+                tech,
+                style: kProjectPageTechnologyStyle,
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+    List<Widget> features = [];
+    for (String tech in project.features) {
+      features.add(
+        Row(
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: kMarginS),
+              child: Text(
+                BULLET_POINT,
+                style: kBulletPoint,
+              ),
+            ),
+            Expanded(
+              child: Text(
+                tech,
+                style: kProjectPageTechnologyStyle,
+              ),
+            ),
+          ],
         ),
       );
     }
@@ -72,6 +100,17 @@ class ProjectPage extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: technologies,
+                  ),
+                  SizedBox(
+                    height: kMarginL,
+                  ),
+                  Text(
+                    FEATURES,
+                    style: kTechnologiesUsedStyle,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: features,
                   ),
                 ],
               ),

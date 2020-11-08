@@ -11,6 +11,7 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenWidget(
+      isBackButtonVisible: true,
       child: Container(
         padding: EdgeInsets.only(
           bottom: bottomSectionPadding,

@@ -48,6 +48,10 @@ final kProjectPageTitleTextStyle = TextStyle(
 final kProjectLongDescriptionTextStyle = TextStyle(
   fontSize: 24,
 );
+final kBulletPoint = TextStyle(
+  fontSize: 24,
+  fontWeight: FontWeight.bold,
+);
 //margins
 const double kMarginXS = 8.0;
 const double kMarginS = 12.0;
@@ -87,8 +91,9 @@ const String LINKED_IN = "LinkedIn";
 const String CV = "CV";
 const String ABOUT_ME = "About Me";
 const String TECHNOLOGIES_USED = "Technologies Used:";
+const String FEATURES = "Features:";
 
-const String BULLET_POINT_FORMAT ="• %s";
+const String BULLET_POINT = "•";
 
 enum ProjectLinkType {
   GITHUB,
