@@ -25,7 +25,7 @@ class ProjectListPage extends StatelessWidget {
                 ),
                 Text(
                   VIEW_ALL,
-                  style: kViewAllStyle,
+                  style: kTechnologiesUsedStyle,
                 ),
               ],
             ),

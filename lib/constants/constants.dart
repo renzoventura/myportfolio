@@ -24,12 +24,19 @@ final kRecentProjectsStyle = TextStyle(
 final kViewAllStyle = TextStyle(
   fontSize: 16,
 );
-final kProjectTitleStyle = TextStyle(
+final kProjectPageTitleStyle = TextStyle(
   fontSize: 24,
 );
-final kProjectTitleDescription = TextStyle(
+final kProjectPageDescription = TextStyle(
+  fontSize: 14,
+);
+final kTechnologiesUsedStyle = TextStyle(
   fontSize: 16,
 );
+final kProjectPageTechnologyStyle = TextStyle(
+  fontSize: 14,
+);
+
 final BoxDecoration kProjectTile = BoxDecoration(
   borderRadius: BorderRadius.all(
     Radius.circular(10.0),
@@ -58,7 +65,8 @@ const double kMarginLL = 64.0;
 const double sectionHeight = 700.0;
 const double minWidthPage = 400;
 const double maxWidthPage = 1200;
-const double topPagePadding = 150;
+const double topPagePadding = 24;
+const double topPageBasePadding = 80;
 
 //section padding
 const double bottomSectionPadding = 100;
@@ -78,6 +86,9 @@ const String GITHUB = "Github";
 const String LINKED_IN = "LinkedIn";
 const String CV = "CV";
 const String ABOUT_ME = "About Me";
+const String TECHNOLOGIES_USED = "Technologies Used:";
+
+const String BULLET_POINT_FORMAT ="• %s";
 
 enum ProjectLinkType {
   GITHUB,

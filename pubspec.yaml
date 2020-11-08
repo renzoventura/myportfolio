@@ -15,6 +15,7 @@ dependencies:
   url_launcher: ^5.4.1
   community_material_icon: ^3.5.95
   flutter_screenutil: ^2.3.1
+  sprintf: ^5.0.0
 
 dev_dependencies:
   flutter_test:

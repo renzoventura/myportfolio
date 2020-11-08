@@ -24,6 +24,7 @@ class HomePage extends StatelessWidget {
     return Container(
       padding: EdgeInsets.only(
         bottom: bottomSectionPadding,
+        top: topPageBasePadding,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

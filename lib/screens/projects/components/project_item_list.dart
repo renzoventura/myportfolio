@@ -64,14 +64,12 @@ class _ProjectItemState extends State<ProjectItem> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    HeroText(
-                      tag: widget.project.title,
-                      text: widget.project.title,
-                      style: kProjectTitleStyle,
+                    Text(
+                      widget.project.title,
+                      style: kProjectPageTitleStyle,
                     ),
-                    HeroText(
-                      tag: widget.project.longDescription,
-                      text: widget.project.shortDescription,
+                    Text(
+                      widget.project.shortDescription,
                       style: kLanguagesTextStyle,
                     ),
                   ],
