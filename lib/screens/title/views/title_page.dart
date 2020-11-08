@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
             align: TextAlign.center,
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: kMarginS),
+            padding: const EdgeInsets.symmetric(vertical: kMargin),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[

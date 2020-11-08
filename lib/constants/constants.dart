@@ -35,7 +35,12 @@ final BoxDecoration kProjectTile = BoxDecoration(
     Radius.circular(10.0),
   ),
 );
-
+final kProjectPageTitleTextStyle = TextStyle(
+  fontSize: 32,
+);
+final kProjectLongDescriptionTextStyle = TextStyle(
+  fontSize: 24,
+);
 //margins
 const double kMarginXS = 8.0;
 const double kMarginS = 12.0;
@@ -57,8 +62,6 @@ const double topPagePadding = 150;
 
 //section padding
 const double bottomSectionPadding = 100;
-
-
 
 //object sizes
 const double circleAvatarMinRadius = 16.0;

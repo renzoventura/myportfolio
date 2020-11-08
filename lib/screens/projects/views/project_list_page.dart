@@ -3,8 +3,8 @@ import 'package:myportfolio/constants/constant_projects.dart';
 import 'package:myportfolio/constants/constants.dart';
 import 'package:myportfolio/screens/projects/components/project_item_list.dart';
 
-class ProjectPage extends StatelessWidget {
-  const ProjectPage({Key key}) : super(key: key);
+class ProjectListPage extends StatelessWidget {
+  const ProjectListPage({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

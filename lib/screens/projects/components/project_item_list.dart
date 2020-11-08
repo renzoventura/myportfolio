@@ -1,7 +1,9 @@
 import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
+import 'package:myportfolio/components/hero_text.dart';
 import 'package:myportfolio/constants/constants.dart';
 import 'package:myportfolio/models/project.dart';
+import 'package:myportfolio/screens/projects/views/project_page.dart';
 
 //TODO: Remove hardcoded values
 class ProjectItem extends StatefulWidget {
@@ -19,7 +21,14 @@ class _ProjectItemState extends State<ProjectItem> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: kMarginS),
       child: InkWell(
-        onTap: () {},
+        onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ProjectPage(
+              project: widget.project,
+            ),
+          ),
+        ),
         onHover: (bool onHold) {
           setState(() {
             isHeld = onHold;
@@ -40,10 +49,13 @@ class _ProjectItemState extends State<ProjectItem> {
             children: <Widget>[
               Expanded(
                 flex: 1,
-                child: Container(
-                  child: Icon(
-                    CommunityMaterialIcons.github_box,
-                    size: 50,
+                child: Hero(
+                  tag: widget.project.logoImage,
+                  child: Container(
+                    child: Icon(
+                      CommunityMaterialIcons.github_box,
+                      size: 50,
+                    ),
                   ),
                 ),
               ),
@@ -52,14 +64,15 @@ class _ProjectItemState extends State<ProjectItem> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Text(
-                      widget.project.title,
-                      textAlign: TextAlign.left,
+                    HeroText(
+                      tag: widget.project.title,
+                      text: widget.project.title,
                       style: kProjectTitleStyle,
                     ),
-                    Text(
-                      widget.project.shortDescription,
-                      style: kProjectTitleDescription,
+                    HeroText(
+                      tag: widget.project.longDescription,
+                      text: widget.project.shortDescription,
+                      style: kLanguagesTextStyle,
                     ),
                   ],
                 ),
