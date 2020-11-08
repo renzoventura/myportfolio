@@ -20,7 +20,7 @@ class ProjectListPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Text(
-                  RECENT_PROJECTS,
+                  PROJECTS,
                   style: kRecentProjectsStyle,
                 ),
                 Text(

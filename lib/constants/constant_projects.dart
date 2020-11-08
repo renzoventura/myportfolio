@@ -29,35 +29,36 @@ Project relit = Project(
   title: "Relit",
   shortDescription: "2D collision based platformer browser game",
   longDescription:
-      "Built using the Godot Game Engine, I developed a 2 dimensional platformer that can interact with different environments based on current stats.",
+      "Built using the Godot Game Engine, A 2D platformer game that can interact with different environments based on current state.",
   logoImage: "relitFilePath",
   features: [
     "Players can changes states between light and dark to solve fun and challenging levels.",
     "Has easy to use UI",
     "Collaborated with a musician and designer to build our first game",
-    "Submmited to 'MY FIRST GAME JAM 2020'",
+    "Submitted to 'MY FIRST GAME JAM 2020'",
   ],
   projectLink: [
+    ProjectLink(
+      link: "https://dual-lasagna.itch.io/relit",
+      linkType: ProjectLinkType.DEMO,
+      description: "Play the demo! (Browser only)",
+    ),
     ProjectLink(
       link: "https://github.com/renzoventura/Relit",
       linkType: ProjectLinkType.GITHUB,
       description: "Link to source code",
     ),
-    ProjectLink(
-      link: "https://dual-lasagna.itch.io/relit",
-      linkType: ProjectLinkType.DEMO,
-      description: "Play the demo!",
-    ),
   ],
   technologies: [
     GODOT,
+    GD_SCRIPT,
   ],
 );
 
 Project financialMeet = Project(
-  title: "Financial Meet",
+  title: "FinancialMeet",
   shortDescription:
-      "Fullstack Web platform that focuses on connecting people with financial advisors to meet their financial goals.",
+      "Fullstack web app that connects people with financial advisors to reach their financial goals.",
   longDescription:
       "A platform that helps users connect with financial advisors, to help them with their needs or financial goals.",
   logoImage: "financialMeetFilePath",
@@ -94,7 +95,7 @@ Project portfolio = Project(
   shortDescription:
       "My Portfolio (you're looking at right now! :D) Powered with Flutter Web.",
   longDescription:
-      "My web portfolio built with flutter web. A place to showcase the projects that I love making in my spare time usually after work. If you'd like to see more of my professional work as a software developer please have a look at my CV from the home screen.",
+      "My web portfolio built with flutter web. A place to showcase the projects that I love making during my spare time. If you'd like to see more of my professional work please have a look at my CV from the home screen.",
   logoImage: "portfolioFilePath",
   projectLink: [
     ProjectLink(
@@ -102,11 +103,6 @@ Project portfolio = Project(
       linkType: ProjectLinkType.GITHUB,
       description: "Link to the source code",
     ),
-//    ProjectLink(
-//      link: "renzo.tech",
-//      linkType: ProjectLinkType.DEMO,
-//      description: "Link to the DEMO",
-//    ),
   ],
   technologies: [
     JAVA,

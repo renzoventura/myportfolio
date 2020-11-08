@@ -4,7 +4,8 @@ import 'package:myportfolio/constants/constants.dart';
 class ScreenWidget extends StatelessWidget {
   final Widget child;
   final bool isBackButtonVisible;
-  ScreenWidget({@required this.child, this.isBackButtonVisible: false});
+  final double topPagePadding;
+  ScreenWidget({@required this.child, this.isBackButtonVisible: false, this.topPagePadding : topPageBasePadding});
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -29,7 +30,7 @@ class ScreenWidget extends StatelessWidget {
                 padding: EdgeInsets.only(
                   left: kMargin,
                   right: kMargin,
-                  top: topPageBasePadding,
+                  top: topPagePadding,
                 ),
                 child: child,
               ),

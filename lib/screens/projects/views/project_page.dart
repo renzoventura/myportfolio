@@ -23,11 +23,11 @@ class ProjectPage extends StatelessWidget {
         .forEach((tech) => technologies.add(BulletPointText(tech)));
     project.features
         .forEach((feature) => features.add(BulletPointText(feature)));
-    project.projectLink
-        .forEach((link) => links.add(ProjectLinkTile(link)));
+    project.projectLink.forEach((link) => links.add(ProjectLinkTile(link)));
 
     return ScreenWidget(
       isBackButtonVisible: true,
+      topPagePadding: kMarginXXL,
       child: Center(
         child: Container(
           child: ConstrainedBox(
@@ -59,39 +59,57 @@ class ProjectPage extends StatelessWidget {
                     project.longDescription,
                     style: kProjectPageDescription,
                   ),
-                  SizedBox(
-                    height: kMarginL,
-                  ),
-                  Text(
-                    TECHNOLOGIES_USED,
-                    style: kTechnologiesUsedStyle,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: technologies,
-                  ),
-                  SizedBox(
-                    height: kMarginL,
-                  ),
-                  Text(
-                    FEATURES,
-                    style: kTechnologiesUsedStyle,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: features,
-                  ),
-                  SizedBox(
-                    height: kMarginL,
-                  ),
-                  Text(
-                    LINKS,
-                    style: kTechnologiesUsedStyle,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: links,
-                  ),
+                  if (features != null || features.isNotEmpty)
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: kMarginL),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            FEATURES,
+                            style: kTechnologiesUsedStyle,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: features,
+                          ),
+                        ],
+                      ),
+                    ),
+                  if (links != null || links.isNotEmpty)
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: kMarginL),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            LINKS,
+                            style: kTechnologiesUsedStyle,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: links,
+                          ),
+                        ],
+                      ),
+                    ),
+                  if (technologies != null || technologies.isNotEmpty)
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: kMarginL),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            TECHNOLOGIES_USED,
+                            style: kTechnologiesUsedStyle,
+                          ),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: technologies,
+                          ),
+                        ],
+                      ),
+                    ),
                 ],
               ),
             ),

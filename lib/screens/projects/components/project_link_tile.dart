@@ -34,7 +34,7 @@ class ProjectLinkTile extends StatelessWidget {
             ],
           ),
           Padding(
-            padding: EdgeInsets.only(left: kMarginXXXXL),
+            padding: EdgeInsets.only(left: kMarginXXXL),
             child: InkWell(
               onTap: () => launchURL(projectLink.link),
               child: Text(
