@@ -29,12 +29,13 @@ Project relit = Project(
   title: "Relit",
   shortDescription: "2D collision based platformer browser game",
   longDescription:
-      "Built using the Godot Game Engine, I developed a 2 dimensional platformer that can interact with different environments based on current stats. \n \n" +
-          "Bio: You are the bridge between light and dark. But before saving the world can you escape dungeon split between the two dimensions?! \n Use your powers to switch between light and dark forms to escape and fulfill your destiny!",
+      "Built using the Godot Game Engine, I developed a 2 dimensional platformer that can interact with different environments based on current stats.",
   logoImage: "relitFilePath",
   features: [
-    "Feature 1",
-    "Feature 2",
+    "Players can changes states between light and dark to solve fun and challenging levels.",
+    "Has easy to use UI",
+    "Collaborated with a musician and designer to build our first game",
+    "Submmited to 'MY FIRST GAME JAM 2020'",
   ],
   projectLink: [
     ProjectLink(
@@ -58,7 +59,7 @@ Project financialMeet = Project(
   shortDescription:
       "Fullstack Web platform that focuses on connecting people with financial advisors to meet their financial goals.",
   longDescription:
-      "A paltform that helps users connect with financial advisors, to help them with their needs or financial goals.",
+      "A platform that helps users connect with financial advisors, to help them with their needs or financial goals.",
   logoImage: "financialMeetFilePath",
   projectLink: [
     ProjectLink(
@@ -75,20 +76,23 @@ Project financialMeet = Project(
   technologies: [
     JAVA,
     SPRING_BOOT,
+    MYSQL,
+    HIBERNATE,
+    JPA,
+    ANGULAR7,
     AWS,
   ],
   features: [
-    "Users can track current states of their financial journey.",
-    "Backend built with Java SpringBoot Restful API and Frontend built with Angular7.",
     "Implemented role based authentications for APIs using JWT and router guards for front end security.",
-    "Deployed testing and production environment using AWS. EC2 for backend, S3 for frontend and RDS for MYSQL database."
+    "Users can track current states of their financial journey.",
+    "Deployed testing and production environments using AWS. EC2 for backend, S3 for frontend and RDS for MYSQL database."
   ],
 );
 
 Project portfolio = Project(
   title: "My Portfolio",
   shortDescription:
-      "My Portfolio, as in this one right now! :) Powered with Flutter Web.",
+      "My Portfolio (you're looking at right now! :D) Powered with Flutter Web.",
   longDescription:
       "My web portfolio built with flutter web. A place to showcase the projects that I love making in my spare time usually after work. If you'd like to see more of my professional work as a software developer please have a look at my CV from the home screen.",
   logoImage: "portfolioFilePath",

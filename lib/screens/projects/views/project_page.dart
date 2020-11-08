@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:myportfolio/components/screen_widget.dart';
 import 'package:myportfolio/constants/constants.dart';
 import 'package:myportfolio/models/project.dart';
+import 'package:myportfolio/screens/projects/components/bullet_point_text.dart';
+import 'package:myportfolio/screens/projects/components/project_link_tile.dart';
 
 class ProjectPage extends StatelessWidget {
   static const id = "/project/";
@@ -14,49 +16,16 @@ class ProjectPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> technologies = [];
-    for (String tech in project.technologies) {
-      technologies.add(
-        Row(
-          children: [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: kMarginS),
-              child: Text(
-                BULLET_POINT,
-                style: kBulletPoint,
-              ),
-            ),
-            Expanded(
-              child: Text(
-                tech,
-                style: kProjectPageTechnologyStyle,
-              ),
-            ),
-          ],
-        ),
-      );
-    }
     List<Widget> features = [];
-    for (String tech in project.features) {
-      features.add(
-        Row(
-          children: [
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: kMarginS),
-              child: Text(
-                BULLET_POINT,
-                style: kBulletPoint,
-              ),
-            ),
-            Expanded(
-              child: Text(
-                tech,
-                style: kProjectPageTechnologyStyle,
-              ),
-            ),
-          ],
-        ),
-      );
-    }
+    List<Widget> links = [];
+
+    project.technologies
+        .forEach((tech) => technologies.add(BulletPointText(tech)));
+    project.features
+        .forEach((feature) => features.add(BulletPointText(feature)));
+    project.projectLink
+        .forEach((link) => links.add(ProjectLinkTile(link)));
+
     return ScreenWidget(
       isBackButtonVisible: true,
       child: Center(
@@ -75,7 +44,7 @@ class ProjectPage extends StatelessWidget {
                     child: Container(
                       child: Icon(
                         CommunityMaterialIcons.github_box,
-                        size: 200,
+                        size: 200, //TODO: HARDCODE
                       ),
                     ),
                   ),
@@ -111,6 +80,17 @@ class ProjectPage extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: features,
+                  ),
+                  SizedBox(
+                    height: kMarginL,
+                  ),
+                  Text(
+                    LINKS,
+                    style: kTechnologiesUsedStyle,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: links,
                   ),
                 ],
               ),

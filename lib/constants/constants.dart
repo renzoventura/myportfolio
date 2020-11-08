@@ -52,6 +52,11 @@ final kBulletPoint = TextStyle(
   fontSize: 24,
   fontWeight: FontWeight.bold,
 );
+final kHyperLink = TextStyle(
+  fontSize: 18,
+  color: Colors.blue,
+);
+
 //margins
 const double kMarginXS = 8.0;
 const double kMarginS = 12.0;
@@ -92,12 +97,17 @@ const String CV = "CV";
 const String ABOUT_ME = "About Me";
 const String TECHNOLOGIES_USED = "Technologies Used:";
 const String FEATURES = "Features:";
-
+const String LINKS = "Links:";
 const String BULLET_POINT = "•";
+const String COLON_FORMAT = "%s : ";
 
+//project types
+enum PROJECT_TYPE {FULLSTACK, BACKEND, FRONTEND,
+  YOUTUBE, IOT, APP,}
+
+//project link types
 enum ProjectLinkType {
   GITHUB,
-  YOUTUBE,
   DEMO,
 }
 
@@ -105,11 +115,14 @@ enum ProjectLinkType {
 const String DART = "Dart";
 const String FLUTTER = "Flutter";
 const String FLUTTER_WEB = "Flutter WEB";
-const String JAVA = "Java";
+const String JAVA = "Java 8";
 const String SPRING_BOOT = "Springboot";
-const String ANGULAR2 = "Angular 2";
+const String ANGULAR7 = "Angular 7";
 const String GODOT = "Godot Game Engine";
 const String AWS = "Amazon Web Services";
+const String MYSQL = "mySQL";
+const String HIBERNATE = "Hibernate";
+const String JPA = "Spring Data JPA";
 
 //hero tags
 const String AVATAR_TAG = "avatar";
