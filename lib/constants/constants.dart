@@ -86,7 +86,7 @@ const double circleAvatarMaxRadius = 100.0;
 const double projectTileSmall = 50;
 const double projectTileLarge = 200;
 const double circleAvatarBackgroundMinRadius = 20.0;
-const double circleAvatarBackgroundMaxRadius = 104.0;
+const double circleAvatarBackgroundMaxRadius = 106.0;
 
 //labels
 const String POSITION_TITLE = "SOFTWARE DEVELOPER";
@@ -104,8 +104,14 @@ const String BULLET_POINT = "•";
 const String COLON_FORMAT = "%s : ";
 
 //project types
-enum PROJECT_TYPE {FULLSTACK, BACKEND, FRONTEND,
-  YOUTUBE, IOT, APP,}
+enum PROJECT_TYPE {
+  FULLSTACK,
+  BACKEND,
+  FRONTEND,
+  YOUTUBE,
+  IOT,
+  APP,
+}
 
 //project link types
 enum ProjectLinkType {
@@ -138,14 +144,14 @@ String kLinkedInUrl = "https://www.linkedin.com/in/renzoventura/";
 
 //technologies display
 const List<String> kLanguages = [
-  'I love making Apps 🤓📱',
+  'I love making Apps 🤓 📱',
   'I can also make backend APIs 💻',
   "At night I'm a Game Developer 👾",
 ];
-
 
 //about me
 const String ABOUT_ME_DESCRIPTION = "";
 
 //timers
 const int tileHoverAnimationDuration = 300;
+const int textAnimationSpeed = 100;

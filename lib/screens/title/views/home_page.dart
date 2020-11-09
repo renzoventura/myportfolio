@@ -40,6 +40,7 @@ class HomePage extends StatelessWidget {
                 maxRadius: circleAvatarMaxRadius,
                 child: ClipOval(
                   child: Image(
+                    height: double.infinity,
                     image: AssetImage(ImageUtils.avatar),
                   ),
                 ),
@@ -63,17 +64,23 @@ class HomePage extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: kMargin),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                RotateAnimatedTextKit(
-                  textAlign: TextAlign.center,
-                  text: kLanguages,
-                  textStyle: kLanguagesTextStyle,
-                  isRepeatingAnimation: true,
-                  totalRepeatCount: 100,
-                ),
-              ],
+            child: Container(
+              height: kMarginXXXXL,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  TypewriterAnimatedTextKit(
+                    textStyle: kLanguagesTextStyle.copyWith(
+                      color: Colors.white,
+                    ),
+                    textAlign: TextAlign.center,
+                    text: kLanguages,
+                    isRepeatingAnimation: true,
+                    repeatForever: true,
+                    speed: Duration(milliseconds: textAnimationSpeed),
+                  ),
+                ],
+              ),
             ),
           ),
           Row(
