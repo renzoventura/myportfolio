@@ -1,11 +1,9 @@
 import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
-import 'package:myportfolio/components/hero_text.dart';
 import 'package:myportfolio/constants/constants.dart';
 import 'package:myportfolio/models/project.dart';
 import 'package:myportfolio/screens/projects/views/project_page.dart';
 
-//TODO: Remove hardcoded values
 class ProjectItem extends StatefulWidget {
   final Project project;
   const ProjectItem(this.project);
@@ -38,7 +36,7 @@ class _ProjectItemState extends State<ProjectItem> {
           decoration: kProjectTile.copyWith(
             color: isHeld ? Colors.grey.shade700 : Colors.grey.shade800,
           ),
-          duration: Duration(milliseconds: 300),
+          duration: Duration(milliseconds: tileHoverAnimationDuration),
           padding: EdgeInsets.only(
             left: kMarginS,
             top: kMargin,
@@ -54,7 +52,7 @@ class _ProjectItemState extends State<ProjectItem> {
                   child: Container(
                     child: Icon(
                       CommunityMaterialIcons.github_box,
-                      size: 50,
+                      size: projectTileSmall,
                     ),
                   ),
                 ),

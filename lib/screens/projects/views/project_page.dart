@@ -44,7 +44,7 @@ class ProjectPage extends StatelessWidget {
                     child: Container(
                       child: Icon(
                         CommunityMaterialIcons.github_box,
-                        size: 200, //TODO: HARDCODE
+                        size: projectTileLarge,
                       ),
                     ),
                   ),
@@ -58,6 +58,9 @@ class ProjectPage extends StatelessWidget {
                   Text(
                     project.longDescription,
                     style: kProjectPageDescription,
+                  ),
+                  SizedBox(
+                    height: kMarginL,
                   ),
                   if (features != null || features.isNotEmpty)
                     Padding(

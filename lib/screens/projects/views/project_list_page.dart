@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myportfolio/constants/constant_projects.dart';
 import 'package:myportfolio/constants/constants.dart';
+import 'package:myportfolio/models/project.dart';
 import 'package:myportfolio/screens/projects/components/project_item_list.dart';
 
 class ProjectListPage extends StatelessWidget {
@@ -8,9 +9,12 @@ class ProjectListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> projectTiles = [];
+    projects.forEach((project) => projectTiles.add(ProjectItem(project)));
     return Container(
-      constraints: BoxConstraints(minWidth: minWidthPage, maxWidth: maxWidthPage),
-      height: sectionHeight,
+      constraints:
+          BoxConstraints(minWidth: minWidthPage, maxWidth: maxWidthPage),
+      // height: sectionHeight,
       child: Column(
         children: <Widget>[
           Padding(
@@ -30,11 +34,17 @@ class ProjectListPage extends StatelessWidget {
               ],
             ),
           ),
-          Expanded(
-            child: ListView.builder(
-                itemCount: projects.length,
-                itemBuilder: (BuildContext context, int index) => ProjectItem(projects[index])),
+          Column(
+            children: projectTiles,
           ),
+          SizedBox(
+            height: kMarginLL,
+          ),
+          // Expanded(
+          //   child: ListView.builder(
+          //       itemCount: projects.length,
+          //       itemBuilder: (BuildContext context, int index) => ProjectItem(projects[index])),
+          // ),
         ],
       ),
     );

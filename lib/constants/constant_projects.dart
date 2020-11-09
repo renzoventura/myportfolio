@@ -20,8 +20,10 @@ Project glowd = Project(
     FLUTTER,
   ],
   features: [
-    "Feature 1",
-    "Feature 2",
+    "Integrated Hue APIs with Chopper",
+    "Lights are grouped up by rooms",
+    "Can turn on/off all lights in a room",
+    "Update light brightness, state and colors",
   ],
 );
 
@@ -115,9 +117,42 @@ Project portfolio = Project(
   ],
 );
 
+Project shade = Project(
+  title: "Shade",
+  shortDescription:
+  "Survival fighting game with 2D pixel art with Enemy AI.",
+  longDescription:
+  "I wanted to build a game from scratch all by myself, I animated and designed all art and programmed the game to completion myself.",
+  logoImage: "shadefilePath",
+  projectLink: [
+    ProjectLink(
+      link: "https://github.com/renzoventura/Shade",
+      linkType: ProjectLinkType.GITHUB,
+      description: "Link to the source code",
+    ),
+    ProjectLink(
+      link: "https://dual-lasagna.itch.io/shade",
+      linkType: ProjectLinkType.DEMO,
+      description: "Play the demo! (Browser only)",
+    ),
+  ],
+  technologies: [
+    GODOT,
+    GD_SCRIPT,
+  ],
+  features: [
+    "Enemy AI",
+    "Finite state machine",
+    "HUD Life/Game Over System",
+    "Animation with collision",
+    "Easy UI",
+  ],
+);
+
 List<Project> projects = [
   glowd,
-  relit,
   financialMeet,
+  relit,
+  shade,
   portfolio,
 ];
