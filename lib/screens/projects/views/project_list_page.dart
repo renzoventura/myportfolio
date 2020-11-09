@@ -14,9 +14,12 @@ class ProjectListPage extends StatelessWidget {
     return Container(
       constraints:
           BoxConstraints(minWidth: minWidthPage, maxWidth: maxWidthPage),
-      // height: sectionHeight,
       child: Column(
         children: <Widget>[
+          Icon(
+            Icons.arrow_drop_up_outlined,
+            size: arrowSize,
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: kMarginXL),
             child: Row(
@@ -40,11 +43,6 @@ class ProjectListPage extends StatelessWidget {
           SizedBox(
             height: kMarginLL,
           ),
-          // Expanded(
-          //   child: ListView.builder(
-          //       itemCount: projects.length,
-          //       itemBuilder: (BuildContext context, int index) => ProjectItem(projects[index])),
-          // ),
         ],
       ),
     );

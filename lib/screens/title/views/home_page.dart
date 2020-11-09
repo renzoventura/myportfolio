@@ -21,95 +21,97 @@ class HomePage extends StatelessWidget {
 
     navigateToAboutMe() => Navigator.pushNamed(context, AboutPage.id);
 
-    return Container(
-      padding: EdgeInsets.only(
-        bottom: bottomSectionPadding,
-        top: topPageBasePadding,
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Hero(
-            tag: AVATAR_TAG,
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Hero(
+          tag: AVATAR_TAG,
+          child: CircleAvatar(
+            minRadius: circleAvatarBackgroundMinRadius,
+            maxRadius: circleAvatarBackgroundMaxRadius,
+            backgroundColor: Colors.white,
             child: CircleAvatar(
-              minRadius: circleAvatarBackgroundMinRadius,
-              maxRadius: circleAvatarBackgroundMaxRadius,
-              backgroundColor: Colors.white,
-              child: CircleAvatar(
-                minRadius: circleAvatarMinRadius,
-                maxRadius: circleAvatarMaxRadius,
-                child: ClipOval(
-                  child: Image(
-                    height: double.infinity,
-                    image: AssetImage(ImageUtils.avatar),
-                  ),
+              minRadius: circleAvatarMinRadius,
+              maxRadius: circleAvatarMaxRadius,
+              child: ClipOval(
+                child: Image(
+                  height: double.infinity,
+                  image: AssetImage(ImageUtils.avatar),
                 ),
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: kMargin),
-            child: HeroText(
-              tag: NAME_TAG,
-              text: PORTFOLIO_NAME,
-              style: kTitleTextStyle,
-              align: TextAlign.center,
-            ),
-          ),
-          HeroText(
-            tag: JOB_TITLE_TAG,
-            text: POSITION_TITLE,
-            style: kSubTitleTextStyle,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: kMargin),
+          child: HeroText(
+            tag: NAME_TAG,
+            text: PORTFOLIO_NAME,
+            style: kTitleTextStyle,
             align: TextAlign.center,
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(vertical: kMargin),
-            child: Container(
-              height: kMarginXXXXL,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  TypewriterAnimatedTextKit(
-                    textStyle: kLanguagesTextStyle.copyWith(
-                      color: Colors.white,
-                    ),
-                    textAlign: TextAlign.center,
-                    text: kLanguages,
-                    isRepeatingAnimation: true,
-                    repeatForever: true,
-                    speed: Duration(milliseconds: textAnimationSpeed),
+        ),
+        HeroText(
+          tag: JOB_TITLE_TAG,
+          text: POSITION_TITLE,
+          style: kSubTitleTextStyle,
+          align: TextAlign.center,
+        ),
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: kMargin),
+          child: Container(
+            height: kMarginXXXXL,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                TypewriterAnimatedTextKit(
+                  //TODO: Textstyle needs FONT FAMILY
+                  textStyle: kLanguagesTextStyle.copyWith(
+                    color: Colors.white,
                   ),
-                ],
-              ),
+                  textAlign: TextAlign.center,
+                  text: kLanguages,
+                  isRepeatingAnimation: true,
+                  repeatForever: true,
+                  speed: Duration(milliseconds: textAnimationSpeed),
+                ),
+              ],
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: <Widget>[
-              ContactDetailItem(
-                CommunityMaterialIcons.github_box,
-                toGitHub,
-                GITHUB,
-              ),
-              ContactDetailItem(
-                CommunityMaterialIcons.linkedin_box,
-                toLinkedIn,
-                LINKED_IN,
-              ),
-              ContactDetailItem(
-                CommunityMaterialIcons.file_document_box,
-                displayCV,
-                CV,
-              ),
-              ContactDetailItem(
-                CommunityMaterialIcons.account_box_outline,
-                navigateToAboutMe,
-                ABOUT_ME,
-              ),
-            ],
-          ),
-        ],
-      ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: <Widget>[
+            ContactDetailItem(
+              CommunityMaterialIcons.github_box,
+              toGitHub,
+              GITHUB,
+            ),
+            ContactDetailItem(
+              CommunityMaterialIcons.linkedin_box,
+              toLinkedIn,
+              LINKED_IN,
+            ),
+            ContactDetailItem(
+              CommunityMaterialIcons.file_document_box,
+              displayCV,
+              CV,
+            ),
+            ContactDetailItem(
+              CommunityMaterialIcons.account_box_outline,
+              navigateToAboutMe,
+              ABOUT_ME,
+            ),
+          ],
+        ),
+        SizedBox(
+          height: kMarginXXXXL,
+        ),
+        Icon(
+          Icons.arrow_drop_down_outlined,
+          size: arrowSize,
+        )
+      ],
     );
   }
 }

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+//Default Color
+final Color defaultColor = Colors.grey[900];
+
 //Material Styles
 final kTitleTextStyle = TextStyle(
   fontSize: 56,
@@ -42,6 +45,7 @@ final BoxDecoration kProjectTile = BoxDecoration(
     Radius.circular(10.0),
   ),
 );
+final Radius slideUpCorners =  Radius.circular(20.0);
 final kProjectPageTitleTextStyle = TextStyle(
   fontSize: 32,
 );
@@ -87,6 +91,7 @@ const double projectTileSmall = 50;
 const double projectTileLarge = 200;
 const double circleAvatarBackgroundMinRadius = 20.0;
 const double circleAvatarBackgroundMaxRadius = 106.0;
+const double arrowSize = 60.0;
 
 //labels
 const String POSITION_TITLE = "SOFTWARE DEVELOPER";
@@ -144,9 +149,10 @@ String kLinkedInUrl = "https://www.linkedin.com/in/renzoventura/";
 
 //technologies display
 const List<String> kLanguages = [
-  'I love making Apps 🤓 📱',
-  'I can also make backend APIs 💻',
-  "At night I'm a Game Developer 👾",
+  'A problem solver 🤓',
+  'Loves making Apps 📱',
+  'can also make backend APIs 💻',
+  "At night he's a Game Developer 👾",
 ];
 
 //about me
