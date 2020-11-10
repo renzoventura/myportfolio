@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:myportfolio/constants/constant_projects.dart';
 import 'package:myportfolio/constants/constants.dart';
-import 'package:myportfolio/models/project.dart';
 import 'package:myportfolio/screens/projects/components/project_item_list.dart';
+import 'package:myportfolio/screens/title/components/contact_details.dart';
 
 class ProjectListPage extends StatelessWidget {
   const ProjectListPage({Key key}) : super(key: key);
@@ -15,13 +15,31 @@ class ProjectListPage extends StatelessWidget {
       constraints:
           BoxConstraints(minWidth: minWidthPage, maxWidth: maxWidthPage),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Icon(
-            Icons.arrow_drop_up_outlined,
-            size: arrowSize,
+          // Icon(
+          //   Icons.arrow_drop_up_outlined,
+          //   size: arrowSize,
+          // ),
+          Padding(
+            padding: const EdgeInsets.only(
+              top: kMarginXL,
+              bottom: kMarginXXXXL,
+            ),
+            child: Column(
+              children: [
+                ContactDetails(),
+                Padding(
+                  padding: const EdgeInsets.only(top: kMargin),
+                  child: Text('SCROLL UP FOR PROJECTS'),
+                )
+              ],
+            ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: kMarginXL),
+            padding: const EdgeInsets.symmetric(
+              vertical: kMarginXXXXL,
+            ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.end,
