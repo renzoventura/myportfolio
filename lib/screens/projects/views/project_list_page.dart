@@ -9,8 +9,16 @@ class ProjectListPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+
     List<Widget> projectTiles = [];
     projects.forEach((project) => projectTiles.add(ProjectItem(project)));
+    double textSize = width * 0.025;
+    textSize > ANIMATED_MAX_SIZE
+        ? textSize = ANIMATED_MAX_SIZE
+        : textSize < ANIMATED_MIN_SIZE
+            ? textSize = ANIMATED_MIN_SIZE
+            : textSize = textSize;
     return Container(
       constraints:
           BoxConstraints(minWidth: minWidthPage, maxWidth: maxWidthPage),
@@ -24,15 +32,20 @@ class ProjectListPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(
               top: kMarginXL,
-              bottom: kMarginXXXXL,
+              bottom: kMarginXXXXXL,
             ),
             child: Column(
               children: [
-                ContactDetails(),
                 Padding(
-                  padding: const EdgeInsets.only(top: kMargin),
-                  child: Text('SCROLL UP FOR PROJECTS'),
-                )
+                  padding: const EdgeInsets.only(bottom: kMarginS),
+                  child: Text(
+                    'SCROLL DOWN FOR PROJECTS',
+                    style: kViewAllStyle.copyWith(
+                      fontSize: textSize,
+                    ),
+                  ),
+                ),
+                ContactDetails(),
               ],
             ),
           ),

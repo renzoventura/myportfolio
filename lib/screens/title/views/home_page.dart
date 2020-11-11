@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:myportfolio/components/hero_text.dart';
 import 'package:myportfolio/constants/constants.dart';
 import 'package:myportfolio/service/image_utils.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key key}) : super(key: key);
@@ -14,17 +15,23 @@ class HomePage extends StatelessWidget {
 
     double nameSize = width * 0.08;
     double jobTitleSize = width * 0.03;
+    double animatedTextSize = width * 0.03;
+
     (nameSize > NAME_MAX_SIZE)
         ? nameSize = NAME_MAX_SIZE
         : nameSize < NAME_MIN_SIZE
             ? nameSize = NAME_MIN_SIZE
             : nameSize = nameSize;
-
     (jobTitleSize > JOB_MAX_SIZE)
         ? jobTitleSize = JOB_MAX_SIZE
         : (jobTitleSize < JOB_MIN_SIZE)
             ? jobTitleSize = JOB_MIN_SIZE
             : jobTitleSize = jobTitleSize;
+    (animatedTextSize > ANIMATED_MAX_SIZE)
+        ? animatedTextSize = ANIMATED_MAX_SIZE
+        : (animatedTextSize < ANIMATED_MIN_SIZE)
+            ? animatedTextSize = ANIMATED_MIN_SIZE
+            : animatedTextSize = jobTitleSize;
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -37,8 +44,9 @@ class HomePage extends StatelessWidget {
             child: CircleAvatar(
               radius: ((height * 1.25 + width * 1.1) / 2) * 0.08,
               child: ClipOval(
-                child: Image(
+                child: FadeInImage(
                   height: double.infinity,
+                  placeholder: MemoryImage(kTransparentImage),
                   image: AssetImage(ImageUtils.avatar),
                 ),
               ),
@@ -73,10 +81,8 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 TypewriterAnimatedTextKit(
-                  textStyle: kLanguagesTextStyle.copyWith(
-                    color: Colors.white,
-                    fontSize: jobTitleSize - 5,
-                    letterSpacing: 3,
+                  textStyle: kAnimatedTextStyle.copyWith(
+                    fontSize: animatedTextSize,
                   ),
                   textAlign: TextAlign.center,
                   text: kLanguages,

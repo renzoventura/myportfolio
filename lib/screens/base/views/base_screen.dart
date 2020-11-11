@@ -24,9 +24,10 @@ class _BaseScreenState extends State<BaseScreen> {
       setState(() => offset = scrollNotification.metrics.pixels);
       return true;
     }
+
     return Material(
       child: DelayedDisplay(
-        fadingDuration : 	const Duration(milliseconds: 2000),
+        fadingDuration: Duration(milliseconds: pageDelay),
         slidingCurve: Curves.decelerate,
         child: NotificationListener<ScrollNotification>(
           onNotification: updateOffsetAccordingToScroll,
@@ -59,7 +60,7 @@ class _BaseScreenState extends State<BaseScreen> {
                 SingleChildScrollView(
                   child: Column(
                     children: <Widget>[
-                      SizedBox(height: height * 0.82),
+                      SizedBox(height: height * 0.78),
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
