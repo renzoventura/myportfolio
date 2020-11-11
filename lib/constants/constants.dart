@@ -40,6 +40,20 @@ final kProjectPageTechnologyStyle = TextStyle(
   fontSize: 14,
 );
 
+//font sizes min and max
+const double NAME_MIN_SIZE = 24;
+const double NAME_MAX_SIZE = 56;
+const double JOB_MIN_SIZE = 12;
+const double JOB_MAX_SIZE = 24;
+const double CONTACT_TEXT_MIN_SIZE = 8;
+const double CONTACT_TEXT_MAX_SIZE = 22;
+const double ICON_MAX_SIZE = 44;
+const double ICON_MIN_SIZE = 10;
+const double PROJECT_TILE_FONT_MIN_SIZE = 12;
+const double PROJECT_TILE_FONT_MAX_SIZE = 22;
+const double PROJECT_ICON_FONT_MIN_SIZE = 14;
+const double PROJECT_ICON_FONT_MAX_SIZE = 54;
+
 final BoxDecoration kProjectTile = BoxDecoration(
   borderRadius: BorderRadius.all(
     Radius.circular(10.0),
@@ -154,6 +168,13 @@ const List<String> kLanguages = [
   'can also make backend APIs 💻',
   "At night he's a Game Developer 👾",
 ];
+// const List<String> kLanguages = [
+//   'A PROBLEM SOLVER 🤓',
+//   'LOVES BUILDING APPS 📱',
+//   'CAN ALSO DEVELOP APIS 💻',
+//   "GAME DEVELOPER BY NIGHT 👾",
+//   "A MARATHON RUNNER 🏃‍♂️",
+// ];
 
 //about me
 const String ABOUT_ME_DESCRIPTION = "";

@@ -17,7 +17,7 @@ class ContactDetails extends StatelessWidget {
 
     navigateToAboutMe() => Navigator.pushNamed(context, AboutPage.id);
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: <Widget>[
         ContactDetailItem(
           CommunityMaterialIcons.github_box,

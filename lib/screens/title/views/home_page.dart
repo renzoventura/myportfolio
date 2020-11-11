@@ -12,6 +12,20 @@ class HomePage extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
 
+    double nameSize = width * 0.08;
+    double jobTitleSize = width * 0.03;
+    (nameSize > NAME_MAX_SIZE)
+        ? nameSize = NAME_MAX_SIZE
+        : nameSize < NAME_MIN_SIZE
+            ? nameSize = NAME_MIN_SIZE
+            : nameSize = nameSize;
+
+    (jobTitleSize > JOB_MAX_SIZE)
+        ? jobTitleSize = JOB_MAX_SIZE
+        : (jobTitleSize < JOB_MIN_SIZE)
+            ? jobTitleSize = JOB_MIN_SIZE
+            : jobTitleSize = jobTitleSize;
+
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
@@ -19,13 +33,9 @@ class HomePage extends StatelessWidget {
           tag: AVATAR_TAG,
           child: CircleAvatar(
             radius: ((height * 1.15 + width * 1.1) / 2) * 0.09,
-            // minRadius: circleAvatarBackgroundMinRadius,
-            // maxRadius: circleAvatarBackgroundMaxRadius,
             backgroundColor: Colors.white,
             child: CircleAvatar(
-              radius: ((height * 1.25 + width* 1.1) / 2) * 0.08,
-              // minRadius: circleAvatarMinRadius,
-              // maxRadius: circleAvatarMaxRadius,
+              radius: ((height * 1.25 + width * 1.1) / 2) * 0.08,
               child: ClipOval(
                 child: Image(
                   height: double.infinity,
@@ -35,19 +45,24 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ),
+        //TODO: Change font based on screen width
         Padding(
           padding: const EdgeInsets.symmetric(vertical: kMargin),
           child: HeroText(
             tag: NAME_TAG,
             text: PORTFOLIO_NAME,
-            style: kTitleTextStyle,
+            style: kTitleTextStyle.copyWith(
+              fontSize: nameSize,
+            ),
             align: TextAlign.center,
           ),
         ),
         HeroText(
           tag: JOB_TITLE_TAG,
           text: POSITION_TITLE,
-          style: kSubTitleTextStyle,
+          style: kSubTitleTextStyle.copyWith(
+            fontSize: jobTitleSize,
+          ),
           align: TextAlign.center,
         ),
         Padding(
@@ -58,9 +73,10 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 TypewriterAnimatedTextKit(
-                  //TODO: Textstyle needs FONT FAMILY
                   textStyle: kLanguagesTextStyle.copyWith(
                     color: Colors.white,
+                    fontSize: jobTitleSize - 5,
+                    letterSpacing: 3,
                   ),
                   textAlign: TextAlign.center,
                   text: kLanguages,
