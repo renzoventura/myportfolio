@@ -128,7 +128,7 @@ const String FEATURES = "Features:";
 const String LINKS = "Links:";
 const String BULLET_POINT = "•";
 const String COLON_FORMAT = "%s : ";
-
+const String SCROLL_DOWN = 'SCROLL DOWN FOR PROJECTS';
 //project types
 enum PROJECT_TYPE {
   FULLSTACK,

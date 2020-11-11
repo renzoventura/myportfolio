@@ -74,7 +74,11 @@ class HomePage extends StatelessWidget {
           align: TextAlign.center,
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: kMargin),
+          padding: EdgeInsets.only(
+            top: kMargin,
+            bottom: kMargin,
+            left: kMargin,
+          ),
           child: Container(
             height: kMarginXXXXL,
             child: Row(

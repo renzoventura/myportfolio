@@ -39,7 +39,7 @@ class ProjectListPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(bottom: kMarginS),
                   child: Text(
-                    'SCROLL DOWN FOR PROJECTS',
+                    SCROLL_DOWN,
                     style: kViewAllStyle.copyWith(
                       fontSize: textSize,
                     ),
