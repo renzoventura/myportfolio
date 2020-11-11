@@ -9,6 +9,22 @@ class ContactDetailItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+
+    double textSize = width * 0.025;
+    double iconSize = width * 0.09;
+
+    textSize > CONTACT_TEXT_MAX_SIZE
+        ? textSize = CONTACT_TEXT_MAX_SIZE
+        : textSize < CONTACT_TEXT_MIN_SIZE
+            ? textSize = CONTACT_TEXT_MIN_SIZE
+            : textSize = textSize;
+
+    iconSize > ICON_MAX_SIZE
+        ? iconSize = ICON_MAX_SIZE
+        : iconSize < ICON_MIN_SIZE
+            ? iconSize = ICON_MIN_SIZE
+            : iconSize = iconSize;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: kMarginXS),
       child: InkWell(
@@ -22,11 +38,14 @@ class ContactDetailItem extends StatelessWidget {
               ),
               child: Icon(
                 iconData,
-                size: 50,
+                size: iconSize,
               ),
             ),
             Text(
               title,
+              style: TextStyle(
+                fontSize: textSize,
+              ),
             )
           ],
         ),

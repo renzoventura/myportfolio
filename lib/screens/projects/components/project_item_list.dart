@@ -16,6 +16,22 @@ class _ProjectItemState extends State<ProjectItem> {
   bool isHeld = false;
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
+
+    double textSize = width * 0.025;
+    double iconSize = width * 0.09;
+
+    textSize > PROJECT_TILE_FONT_MAX_SIZE
+        ? textSize = PROJECT_TILE_FONT_MAX_SIZE
+        : textSize < PROJECT_TILE_FONT_MIN_SIZE
+        ? textSize = PROJECT_TILE_FONT_MIN_SIZE
+        : textSize = textSize;
+
+    iconSize > PROJECT_ICON_FONT_MAX_SIZE
+        ? iconSize = PROJECT_ICON_FONT_MAX_SIZE
+        : iconSize < PROJECT_ICON_FONT_MIN_SIZE
+        ? iconSize = PROJECT_ICON_FONT_MIN_SIZE
+        : iconSize = iconSize;
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: kMarginS),
       child: InkWell(
@@ -52,10 +68,13 @@ class _ProjectItemState extends State<ProjectItem> {
                   child: Container(
                     child: Icon(
                       CommunityMaterialIcons.github_box,
-                      size: projectTileSmall,
+                      size: iconSize,
                     ),
                   ),
                 ),
+              ),
+              SizedBox(
+                width: kMarginS,
               ),
               Expanded(
                 flex: 4,
@@ -64,11 +83,11 @@ class _ProjectItemState extends State<ProjectItem> {
                   children: <Widget>[
                     Text(
                       widget.project.title,
-                      style: kProjectPageTitleStyle,
+                      style: kProjectPageTitleStyle.copyWith(fontSize: textSize),
                     ),
                     Text(
                       widget.project.shortDescription,
-                      style: kLanguagesTextStyle,
+                      style: kLanguagesTextStyle.copyWith(fontSize: textSize),
                     ),
                   ],
                 ),
