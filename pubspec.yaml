@@ -10,11 +10,15 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^0.1.2
-  animated_text_kit: ^2.0.0
+  animated_text_kit: ^2.5.4
   google_fonts: ^0.3.3
   url_launcher: ^5.4.1
   community_material_icon: ^3.5.95
   flutter_screenutil: ^2.3.1
+  sprintf: ^5.0.0
+  transparent_image: ^1.0.0
+  delayed_display: ^1.0.3
+  sliding_up_panel: ^1.0.2
 
 dev_dependencies:
   flutter_test:

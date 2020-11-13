@@ -10,3 +10,15 @@ extension ProjectLinkTypesExtension on ProjectLinkType {
     return null;
   }
 }
+
+extension ProjectLinkTypeExtension on ProjectLinkType {
+  String getString () {
+    switch(this) {
+      case ProjectLinkType.GITHUB:
+        return "GitHub";
+      case ProjectLinkType.DEMO:
+        return "Demo";
+    }
+    return "";
+  }
+}

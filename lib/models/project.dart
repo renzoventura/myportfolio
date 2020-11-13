@@ -6,6 +6,7 @@ class Project {
   String shortDescription;
   String longDescription;
   String logoImage;
+  List<String> features;
   List<ProjectLink> projectLink;
   List<String> technologies;
 
@@ -14,6 +15,7 @@ class Project {
     @required this.shortDescription,
     @required this.longDescription,
     @required this.logoImage,
+    @required this.features,
     @required this.projectLink,
     @required this.technologies,
   });
@@ -23,6 +25,7 @@ class Project {
     shortDescription = json['shortDescription'];
     longDescription = json['longDescription'];
     logoImage = json['logoImage'];
+    features = json['features'];
     if (json['ProjectLink'] != null) {
       projectLink = new List<ProjectLink>();
       json['ProjectLink'].forEach((v) {
@@ -38,6 +41,7 @@ class Project {
     data['shortDescription'] = this.shortDescription;
     data['longDescription'] = this.longDescription;
     data['logoImage'] = this.logoImage;
+    data['features'] = this.features;
     if (this.projectLink != null) {
       data['ProjectLink'] = this.projectLink.map((v) => v.toJson()).toList();
     }

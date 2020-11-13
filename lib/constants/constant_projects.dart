@@ -7,7 +7,7 @@ Project glowd = Project(
   shortDescription: "IoT smart home cross platform iOS & Android controller",
   longDescription:
       "Built with Flutter, this is an Internet of Things smart home controller. Cross platform between iOS and Android that can control your Philips Hue lights integrated with the HUE API.",
-  logoImage: "FilePath",
+  logoImage: "glowdFilePath",
   projectLink: [
     ProjectLink(
       link: "https://github.com/renzoventura/glowd",
@@ -19,39 +19,51 @@ Project glowd = Project(
     DART,
     FLUTTER,
   ],
+  features: [
+    "Integrated Hue APIs with Chopper",
+    "Lights are grouped up by rooms",
+    "Can turn on/off all lights in a room",
+    "Update light brightness, state and colors",
+  ],
 );
 
 Project relit = Project(
   title: "Relit",
   shortDescription: "2D collision based platformer browser game",
   longDescription:
-      "Built using the Godot Game Engine, I developed a 2 dimensional platformer that can interact with different environments based on current stats. \n \n" +
-          "Bio: You are the bridge between light and dark. But before saving the world can you escape dungeon split between the two dimensions?! \n Use your powers to switch between light and dark forms to escape and fulfill your destiny!",
-  logoImage: "FilePath",
+      "Built using the Godot Game Engine, A 2D platformer game that can interact with different environments based on current state.",
+  logoImage: "relitFilePath",
+  features: [
+    "Players can changes states between light and dark to solve fun and challenging levels.",
+    "Has easy to use UI",
+    "Collaborated with a musician and designer to build our first game",
+    "Submitted to 'MY FIRST GAME JAM 2020'",
+  ],
   projectLink: [
+    ProjectLink(
+      link: "https://dual-lasagna.itch.io/relit",
+      linkType: ProjectLinkType.DEMO,
+      description: "Play the demo! (Browser only)",
+    ),
     ProjectLink(
       link: "https://github.com/renzoventura/Relit",
       linkType: ProjectLinkType.GITHUB,
       description: "Link to source code",
     ),
-    ProjectLink(
-      link: "https://dual-lasagna.itch.io/relit",
-      linkType: ProjectLinkType.DEMO,
-      description: "Play the demo!",
-    ),
   ],
   technologies: [
     GODOT,
+    GD_SCRIPT,
   ],
 );
 
 Project financialMeet = Project(
-  title: "Financial Meet",
+  title: "FinancialMeet",
   shortDescription:
-      "Fullstack Web platform that focuses on connecting people with financial advisors to meet their financial goals.",
+      "Fullstack web app that connects people with financial advisors to reach their financial goals.",
   longDescription:
-      "A paltform that helps users connect with financial advisors, to help them with their needs or financial goals. \n\nUsers can track current states of their financial journey. \nBackend built with Java SpringBoot Restful API and Frontend built with Angular7. \n Implemented role based authentications for APIs using JWT and router guards for front end security. \n Deployed testing and production environemnts using AWS. EC2 for backend, S3 for frontend and RDS for MYSQL database.",
-  logoImage: "FilePath",
+      "A platform that helps users connect with financial advisors, to help them with their needs or financial goals.",
+  logoImage: "financialMeetFilePath",
   projectLink: [
     ProjectLink(
       link: "https://github.com/renzoventura/financial-meet",
@@ -67,39 +79,80 @@ Project financialMeet = Project(
   technologies: [
     JAVA,
     SPRING_BOOT,
+    MYSQL,
+    HIBERNATE,
+    JPA,
+    ANGULAR7,
     AWS,
+  ],
+  features: [
+    "Implemented role based authentications for APIs using JWT and router guards for front end security.",
+    "Users can track current states of their financial journey.",
+    "Deployed testing and production environments using AWS. EC2 for backend, S3 for frontend and RDS for MYSQL database."
   ],
 );
 
 Project portfolio = Project(
   title: "My Portfolio",
   shortDescription:
-      "My Portfolio, as in this one right now! :) Powered with Flutter Web.",
+      "My Portfolio (you're looking at right now! :D) Powered with Flutter Web.",
   longDescription:
-      "My web portfolio built with flutter web. A place to showcase the projects that I love making in my spare time usually after work. If you'd like to see more of my professional work as a software developer please have a look at my CV from the home screen.",
-  logoImage: "FilePath",
+      "My web portfolio built with flutter web. A place to showcase the projects that I love making during my spare time. If you'd like to see more of my professional work please have a look at my CV from the home screen.",
+  logoImage: "portfolioFilePath",
   projectLink: [
     ProjectLink(
       link: "https://github.com/renzoventura/myportfolio",
       linkType: ProjectLinkType.GITHUB,
       description: "Link to the source code",
     ),
-//    ProjectLink(
-//      link: "renzo.tech",
-//      linkType: ProjectLinkType.DEMO,
-//      description: "Link to the DEMO",
-//    ),
   ],
   technologies: [
     JAVA,
     SPRING_BOOT,
     AWS,
   ],
+  features: [
+    "Feature 1",
+    "Feature 2",
+  ],
+);
+
+Project shade = Project(
+  title: "Shade",
+  shortDescription:
+  "Survival fighting game with 2D pixel art with Enemy AI.",
+  longDescription:
+  "I wanted to build a game from scratch all by myself, I animated and designed all art and programmed the game to completion myself.",
+  logoImage: "shadefilePath",
+  projectLink: [
+    ProjectLink(
+      link: "https://github.com/renzoventura/Shade",
+      linkType: ProjectLinkType.GITHUB,
+      description: "Link to the source code",
+    ),
+    ProjectLink(
+      link: "https://dual-lasagna.itch.io/shade",
+      linkType: ProjectLinkType.DEMO,
+      description: "Play the demo! (Browser only)",
+    ),
+  ],
+  technologies: [
+    GODOT,
+    GD_SCRIPT,
+  ],
+  features: [
+    "Enemy AI",
+    "Finite state machine",
+    "HUD Life/Game Over System",
+    "Animation with collision",
+    "Easy UI",
+  ],
 );
 
 List<Project> projects = [
   glowd,
-  relit,
   financialMeet,
+  relit,
+  shade,
   portfolio,
 ];
