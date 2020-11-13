@@ -1,17 +1,9 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:myportfolio/components/hero_text.dart';
-import 'package:myportfolio/components/screen_widget.dart';
 import 'package:myportfolio/constants/constants.dart';
-import 'package:myportfolio/screens/about/views/about_page.dart';
 import 'package:myportfolio/screens/projects/views/project_list_page.dart';
-import 'package:myportfolio/screens/title/components/contact_detail_item.dart';
 import 'package:myportfolio/screens/title/views/home_page.dart';
-import 'package:myportfolio/service/image_utils.dart';
-import 'package:myportfolio/service/launch_url_service.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class BaseScreen extends StatefulWidget {
