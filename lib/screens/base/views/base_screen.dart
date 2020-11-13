@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:myportfolio/constants/constants.dart';
 import 'package:myportfolio/screens/projects/views/project_list_page.dart';
 import 'package:myportfolio/screens/title/views/home_page.dart';
+import 'package:myportfolio/service/image_utils.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class BaseScreen extends StatefulWidget {
   static const id = "/";
@@ -21,7 +23,7 @@ class _BaseScreenState extends State<BaseScreen> {
     final width = MediaQuery.of(context).size.width;
 
     bool updateOffsetAccordingToScroll(ScrollNotification scrollNotification) {
-      setState(() => offset = scrollNotification.metrics.pixels);
+      setState(() => offset = scrollNotification.metrics.pixels * 2);
       return true;
     }
 
@@ -36,16 +38,27 @@ class _BaseScreenState extends State<BaseScreen> {
             child: Stack(
               children: <Widget>[
                 //TODO: ADD BACKGROUND HERE
-                // Positioned(
-                //   top: -.25 * offset,
-                //   child: FadeInImage.memoryNetwork(
-                //     placeholder: kTransparentImage,
-                //     image: url,
-                //     height: height,
-                //     width: width,
-                //     fit: BoxFit.fitWidth,
-                //   ),
+                // child: FadeInImage(
+                //   height: double.infinity,
+                //   placeholder: MemoryImage(kTransparentImage),
+                //   image: AssetImage(ImageUtils.avatar),
                 // ),
+                Positioned(
+                  height: height * 0.8,
+                  width: width,
+                  top: -.25 * offset,
+                  child: FadeInImage(
+                    placeholder: MemoryImage(
+                      kTransparentImage,
+                    ),
+                    image: AssetImage(
+                      ImageUtils.background,
+                    ),
+                    height: height * 0.8,
+                    width: width,
+                    fit: BoxFit.cover,
+                  ),
+                ),
                 Positioned(
                   top: -.25 * offset,
                   child: SizedBox(
