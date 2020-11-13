@@ -24,6 +24,10 @@ class AboutPage extends StatelessWidget {
         : (jobTitleSize < JOB_MIN_SIZE)
             ? jobTitleSize = JOB_MIN_SIZE
             : jobTitleSize = jobTitleSize;
+    List<Widget> achievements = [];
+    ACHIEVEMENTS.forEach((text) => achievements.add(Text(text)));
+    List<Widget> interests = [];
+    INTERESTS.forEach((text) => interests.add(Text(text)));
     return ScreenWidget(
       isBackButtonVisible: true,
       child: Center(
@@ -56,6 +60,21 @@ class AboutPage extends StatelessWidget {
                 Text(
                   ABOUT_ME_DESCRIPTION,
                 ),
+                Text(
+                  INTERESTS_DESCRIPTION,
+                ),
+                Text(
+                  NOTABLE,
+                ),
+                Column(
+                  children: achievements,
+                ),
+                Text(
+                  INTEREST,
+                ),
+                Column(
+                  children: interests,
+                )
               ],
             ),
           ),

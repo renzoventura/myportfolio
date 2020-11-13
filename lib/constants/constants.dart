@@ -158,6 +158,7 @@ const String AWS = "Amazon Web Services";
 const String MYSQL = "mySQL";
 const String HIBERNATE = "Hibernate";
 const String JPA = "Spring Data JPA";
+const String FIREBASE = "Firebase";
 
 //hero tags
 const String AVATAR_TAG = "avatar";
@@ -178,7 +179,23 @@ const List<String> kLanguages = [
 ];
 
 //about me
-const String ABOUT_ME_DESCRIPTION = "";
+const String ABOUT_ME_DESCRIPTION = "Hi! I am a Auckland based software developer, experienced in working with fintech companies!";
+const String INTERESTS_DESCRIPTION = "Always hungry to learn, I love building apps, creating backend and also making games!";
+const String NOTABLE = "Notable achievements that I've accomplished:";
+const List<String> ACHIEVEMENTS = [
+  'Developed a feature rich payment solution app',
+  'Developed a scalable automated test system. It resulted in improving my companies release process efficiency by 10% by automating regression testing and saw a significant decrease in bug raises by 15%!'
+];
+
+const String INTEREST = "When I'm not working on my side projects, I like to:";
+const List<String> INTERESTS = [
+  'Reading! My favourite books are "Obstacle is the way" by Ryan Holiday", "11.22.63" by Stephen King and the "Orphan X" series by Gregg Hurwitz',
+  'Running! I ran my first full marathon at the ASB Marathon 2020.',
+  'Play Games!, My favourite games are "Hollow Knight" and the "Dark Souls" Series',
+];
+
+
+
 
 //timers
 const int tileHoverAnimationDuration = 300;

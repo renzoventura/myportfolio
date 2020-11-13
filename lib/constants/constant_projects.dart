@@ -119,10 +119,9 @@ Project portfolio = Project(
 
 Project shade = Project(
   title: "Shade",
-  shortDescription:
-  "Survival fighting game with 2D pixel art with Enemy AI.",
+  shortDescription: "Survival fighting game with 2D pixel art with Enemy AI.",
   longDescription:
-  "I wanted to build a game from scratch all by myself, I animated and designed all art and programmed the game to completion myself.",
+      "I wanted to build a game from scratch all by myself, I animated and designed all art and programmed the game to completion myself.",
   logoImage: "shadefilePath",
   projectLink: [
     ProjectLink(
@@ -149,10 +148,33 @@ Project shade = Project(
   ],
 );
 
+Project flutterBootCampProjects = Project(
+  title: "Flutter Bootcamp Projects",
+  shortDescription:
+      "Projects I made during the 2020 Flutter Development Bootcamp",
+  longDescription:
+      "Projects I made during the 2020 Flutter Development Bootcamp that consist of \n- Exchange rate app \n- BMI calculator \n- Instant messaging using firebase \n- To do List \n- Weather App",
+  logoImage: "flutterBootCampProjectsPath",
+  projectLink: [
+    ProjectLink(
+      link: "https://github.com/renzoventura/FlutterBootcampProjects",
+      linkType: ProjectLinkType.GITHUB,
+      description: "Link to the source code",
+    ),
+  ],
+  technologies: [FLUTTER, DART, FIREBASE],
+  features: [
+    "Used Firebase for authentication, cloud functions and database.",
+    "Call weather API to retrieve weather information based on users current location",
+    "Call bitcoinaverage API to display different Crypocurrency price index exchange rates.",
+  ],
+);
+
 List<Project> projects = [
   glowd,
   financialMeet,
   relit,
   shade,
   portfolio,
+  flutterBootCampProjects,
 ];
