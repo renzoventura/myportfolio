@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:myportfolio/screens/about/views/about_page.dart';
 import 'package:myportfolio/screens/base/views/base_screen.dart';
-import 'package:myportfolio/screens/projects/views/project_page.dart';
+import 'package:myportfolio/screens/projects/views/project_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
       routes: {
         BaseScreen.id: (context) => BaseScreen(),
         AboutPage.id: (context) => AboutPage(),
-        ProjectPage.id: (context) => ProjectPage(),
+        ProjectScreen.id: (context) => ProjectScreen(),
       },
     );
   }

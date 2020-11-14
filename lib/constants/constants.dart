@@ -169,6 +169,7 @@ const String JOB_TITLE_TAG = "jobTitle";
 //url
 String kGithubUrl = "https://github.com/renzoventura";
 String kLinkedInUrl = "https://www.linkedin.com/in/renzoventura/";
+String kCVGoogleDriveUrl = "https://drive.google.com/file/d/1eLf1CWTGcT25g01Jvr1aUNIyDGFJ-p8J/view";
 
 //technologies display
 const List<String> kLanguages = [

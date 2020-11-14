@@ -13,7 +13,7 @@ class ContactDetails extends StatelessWidget {
 
     toLinkedIn() => launchURL(kLinkedInUrl);
 
-    displayCV() => launchURL(kGithubUrl);
+    displayCV() => launchURL(kCVGoogleDriveUrl);
 
     navigateToAboutMe() => Navigator.pushNamed(context, AboutPage.id);
     return Row(

@@ -3,8 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myportfolio/constants/constants.dart';
 import 'package:myportfolio/screens/projects/views/project_list_page.dart';
-import 'package:myportfolio/screens/title/views/home_page.dart';
-import 'package:myportfolio/service/image_utils.dart';
+import 'package:myportfolio/screens/title/views/title_screen.dart';
+import 'package:myportfolio/service/asset_utils.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class BaseScreen extends StatefulWidget {
@@ -46,7 +46,7 @@ class _BaseScreenState extends State<BaseScreen> {
                       kTransparentImage,
                     ),
                     image: AssetImage(
-                      ImageUtils.background,
+                      AssetUtils.background,
                     ),
                     height: height * titleScreenHeight,
                     width: width,

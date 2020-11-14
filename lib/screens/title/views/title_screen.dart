@@ -2,7 +2,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:myportfolio/components/hero_text.dart';
 import 'package:myportfolio/constants/constants.dart';
-import 'package:myportfolio/service/image_utils.dart';
+import 'package:myportfolio/service/asset_utils.dart';
 import 'package:transparent_image/transparent_image.dart';
 
 class HomePage extends StatelessWidget {
@@ -50,7 +50,7 @@ class HomePage extends StatelessWidget {
                 child: FadeInImage(
                   height: double.infinity,
                   placeholder: MemoryImage(kTransparentImage),
-                  image: AssetImage(ImageUtils.avatar),
+                  image: AssetImage(AssetUtils.avatar),
                 ),
               ),
             ),

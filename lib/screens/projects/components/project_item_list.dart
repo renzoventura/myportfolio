@@ -2,7 +2,7 @@ import 'package:community_material_icon/community_material_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:myportfolio/constants/constants.dart';
 import 'package:myportfolio/models/project.dart';
-import 'package:myportfolio/screens/projects/views/project_page.dart';
+import 'package:myportfolio/screens/projects/views/project_screen.dart';
 
 class ProjectItem extends StatefulWidget {
   final Project project;
@@ -38,7 +38,7 @@ class _ProjectItemState extends State<ProjectItem> {
         onTap: () => Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => ProjectPage(
+            builder: (context) => ProjectScreen(
               project: widget.project,
             ),
           ),

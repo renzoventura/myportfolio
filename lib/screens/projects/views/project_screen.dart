@@ -7,11 +7,11 @@ import 'package:myportfolio/models/project.dart';
 import 'package:myportfolio/screens/projects/components/bullet_point_text.dart';
 import 'package:myportfolio/screens/projects/components/project_link_tile.dart';
 
-class ProjectPage extends StatelessWidget {
+class ProjectScreen extends StatelessWidget {
   static const id = "/project/";
   final Project project;
 
-  const ProjectPage({Key key, this.project}) : super(key: key);
+  const ProjectScreen({Key key, this.project}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
