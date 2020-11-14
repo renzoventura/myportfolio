@@ -13,9 +13,9 @@ class HomePage extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
 
-    double nameSize = width * 0.08;
-    double jobTitleSize = width * 0.03;
-    double animatedTextSize = width * 0.03;
+    double nameSize = width * nameSizePercent;
+    double jobTitleSize = width * jobTitleSizePercent;
+    double animatedTextSize = width * jobTitleSizePercent;
 
     (nameSize > NAME_MAX_SIZE)
         ? nameSize = NAME_MAX_SIZE
@@ -39,10 +39,13 @@ class HomePage extends StatelessWidget {
         Hero(
           tag: AVATAR_TAG,
           child: CircleAvatar(
-            radius: ((height * 1.15 + width * 1.1) / 2) * 0.09,
+            radius: ((height * bigRadiusHeightPercent +
+                        width * bigRadiusWidthPercent) /
+                    two) *
+                bigRadiusAveragePercent,
             backgroundColor: Colors.white,
             child: CircleAvatar(
-              radius: ((height * 1.25 + width * 1.1) / 2) * 0.08,
+              radius: ((height * smallRadiusHeightPercent + width * smallRadiusWidthPercent) / two) * nameSizePercent,
               child: ClipOval(
                 child: FadeInImage(
                   height: double.infinity,
@@ -53,7 +56,6 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ),
-        //TODO: Change font based on screen width
         Padding(
           padding: const EdgeInsets.symmetric(vertical: kMargin),
           child: HeroText(

@@ -129,6 +129,7 @@ const String LINKS = "Links:";
 const String BULLET_POINT = "•";
 const String COLON_FORMAT = "%s : ";
 const String SCROLL_DOWN = 'SCROLL DOWN FOR PROJECTS';
+
 //project types
 enum PROJECT_TYPE {
   FULLSTACK,
@@ -179,8 +180,10 @@ const List<String> kLanguages = [
 ];
 
 //about me
-const String ABOUT_ME_DESCRIPTION = "Hi! I am a Auckland based software developer, experienced in working with fintech companies!";
-const String INTERESTS_DESCRIPTION = "Always hungry to learn, I love building apps, creating backend and also making games!";
+const String ABOUT_ME_DESCRIPTION =
+    "Hi! I am a Auckland based software developer, experienced in working with fintech companies!";
+const String INTERESTS_DESCRIPTION =
+    "Always hungry to learn, I love building apps, creating backend and also making games!";
 const String NOTABLE = "Notable achievements that I've accomplished:";
 const List<String> ACHIEVEMENTS = [
   'Developed a feature rich payment solution app',
@@ -194,10 +197,23 @@ const List<String> INTERESTS = [
   'Play Games!, My favourite games are "Hollow Knight" and the "Dark Souls" Series',
 ];
 
-
-
-
 //timers
 const int tileHoverAnimationDuration = 300;
 const int textAnimationSpeed = 100;
 const int pageDelay = 2000;
+
+//size percentage
+const double scrollPixels = 1.5;
+const double titleScreenHeight = 0.8;
+const double sizedBox = 0.78;
+const double nameSizePercent = 0.08;
+const double jobTitleSizePercent = 0.03;
+const double bigRadiusHeightPercent = 1.15;
+const double bigRadiusWidthPercent =1.1;
+const double bigRadiusAveragePercent = 0.09;
+
+const double smallRadiusHeightPercent = 1.25;
+const double smallRadiusWidthPercent = 1.1;
+const double two = 2;
+//position
+const double top = -.25;

@@ -23,7 +23,7 @@ class _BaseScreenState extends State<BaseScreen> {
     final width = MediaQuery.of(context).size.width;
 
     bool updateOffsetAccordingToScroll(ScrollNotification scrollNotification) {
-      setState(() => offset = scrollNotification.metrics.pixels * 2);
+      setState(() => offset = scrollNotification.metrics.pixels * scrollPixels);
       return true;
     }
 
@@ -37,16 +37,10 @@ class _BaseScreenState extends State<BaseScreen> {
             behavior: NoScrollGlow(),
             child: Stack(
               children: <Widget>[
-                //TODO: ADD BACKGROUND HERE
-                // child: FadeInImage(
-                //   height: double.infinity,
-                //   placeholder: MemoryImage(kTransparentImage),
-                //   image: AssetImage(ImageUtils.avatar),
-                // ),
                 Positioned(
-                  height: height * 0.8,
+                  height: height * titleScreenHeight,
                   width: width,
-                  top: -.25 * offset,
+                  top: top * offset,
                   child: FadeInImage(
                     placeholder: MemoryImage(
                       kTransparentImage,
@@ -54,13 +48,13 @@ class _BaseScreenState extends State<BaseScreen> {
                     image: AssetImage(
                       ImageUtils.background,
                     ),
-                    height: height * 0.8,
+                    height: height * titleScreenHeight,
                     width: width,
                     fit: BoxFit.cover,
                   ),
                 ),
                 Positioned(
-                  top: -.25 * offset,
+                  top: top * offset,
                   child: SizedBox(
                     height: height,
                     width: width,
@@ -71,9 +65,10 @@ class _BaseScreenState extends State<BaseScreen> {
                   ),
                 ),
                 SingleChildScrollView(
+                  physics: ClampingScrollPhysics(),
                   child: Column(
                     children: <Widget>[
-                      SizedBox(height: height * 0.78),
+                      SizedBox(height: height * sizedBox),
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(
