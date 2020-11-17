@@ -115,8 +115,9 @@ const double circleAvatarBackgroundMaxRadius = 106.0;
 const double arrowSize = 60.0;
 
 //labels
-const String POSITION_TITLE = "SOFTWARE DEVELOPER";
+const String POSITION_TITLE = "FULLSTACK DEVELOPER";
 const String PORTFOLIO_NAME = "RENZO VENTURA";
+const String EMAIL = "renzoventura96@gmail.com";
 const String PROJECTS = "Projects";
 const String VIEW_ALL = "View All";
 const String GITHUB = "Github";
@@ -169,7 +170,7 @@ const String JOB_TITLE_TAG = "jobTitle";
 //url
 String kGithubUrl = "https://github.com/renzoventura";
 String kLinkedInUrl = "https://www.linkedin.com/in/renzoventura/";
-String kCVGoogleDriveUrl = "https://drive.google.com/file/d/1eLf1CWTGcT25g01Jvr1aUNIyDGFJ-p8J/view";
+String kCVGoogleDriveUrl = "https://docs.google.com/document/d/1IqrNjVRFOarXazkQxgBpLtOecg8Ry8KJNbrZq-gzXnw/export?format=pdf";
 
 //technologies display
 const List<String> kLanguages = [
@@ -182,9 +183,10 @@ const List<String> kLanguages = [
 
 //about me
 const String ABOUT_ME_DESCRIPTION =
-    "Hi! I am a Auckland based software developer, experienced in working with fintech companies!";
+    "A fullstack developer in the fintech space.";
 const String INTERESTS_DESCRIPTION =
-    "Always hungry to learn, I love building apps, creating backend and also making games!";
+    "I am passionate about building products that accelerate organizational success.";
+
 const String NOTABLE = "Notable achievements that I've accomplished:";
 const List<String> ACHIEVEMENTS = [
   'Developed a feature rich payment solution app',
@@ -193,7 +195,7 @@ const List<String> ACHIEVEMENTS = [
 
 const String INTEREST = "When I'm not working on my side projects, I like to:";
 const List<String> INTERESTS = [
-  'Reading! My favourite books are "Obstacle is the way" by Ryan Holiday", "11.22.63" by Stephen King and the "Orphan X" series by Gregg Hurwitz',
+  'Reading! My favourite books are "The Obstacle is the way" by Ryan Holiday", "11.22.63" by Stephen King and the "Orphan X" series by Gregg Hurwitz',
   'Running! I ran my first full marathon at the ASB Marathon 2020.',
   'Play Games!, My favourite games are "Hollow Knight" and the "Dark Souls" Series',
 ];
@@ -212,9 +214,14 @@ const double jobTitleSizePercent = 0.03;
 const double bigRadiusHeightPercent = 1.15;
 const double bigRadiusWidthPercent =1.1;
 const double bigRadiusAveragePercent = 0.09;
-
 const double smallRadiusHeightPercent = 1.25;
 const double smallRadiusWidthPercent = 1.1;
 const double two = 2;
+
 //position
 const double top = -.25;
+
+//url launcher email
+const String mailTo = "mailto";
+const String subject = "subject";
+const String email_subject = "Hi!";
