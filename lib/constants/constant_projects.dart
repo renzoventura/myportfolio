@@ -102,7 +102,7 @@ Project portfolio = Project(
         "My Portfolio (you're looking at right now! :D) Powered with Flutter Web.",
     longDescription:
         "My web portfolio powered by Flutter Web. A place to showcase projects that I love making during my spare time. If you'd like to see more of my professional work please refer to my CV from the home screen.",
-    logoImage: "assets/images/portfolio/logo/logo.PNG",
+    logoImage: "assets/images/portfolio/logo/logo.png",
     projectLink: [
       ProjectLink(
         link: "https://github.com/renzoventura/myportfolio",
