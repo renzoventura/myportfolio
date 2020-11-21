@@ -59,55 +59,46 @@ class ProjectScreen extends StatelessWidget {
           )));
 
     if (features != null || features.isNotEmpty)
-      featuresLinksAndTech.add(Container(
-        padding: const EdgeInsets.symmetric(vertical: 0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              FEATURES,
-              style: kTechnologiesUsedStyle,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: features,
-            ),
-          ],
-        ),
+      featuresLinksAndTech.add(Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            FEATURES,
+            style: kTechnologiesUsedStyle,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: features,
+          ),
+        ],
       ));
     if (links != null || links.isNotEmpty)
-      featuresLinksAndTech.add(Container(
-        padding: const EdgeInsets.symmetric(vertical: 0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              LINKS,
-              style: kTechnologiesUsedStyle,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: links,
-            ),
-          ],
-        ),
+      featuresLinksAndTech.add(Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            LINKS,
+            style: kTechnologiesUsedStyle,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: links,
+          ),
+        ],
       ));
     if (technologies != null || technologies.isNotEmpty)
-      featuresLinksAndTech.add(Container(
-        padding: const EdgeInsets.symmetric(vertical: 0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              TECHNOLOGIES_USED,
-              style: kTechnologiesUsedStyle,
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: technologies,
-            ),
-          ],
-        ),
+      featuresLinksAndTech.add(Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            TECHNOLOGIES_USED,
+            style: kTechnologiesUsedStyle,
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: technologies,
+          ),
+        ],
       ));
     return ScreenWidget(
       isBackButtonVisible: true,

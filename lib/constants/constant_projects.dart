@@ -68,9 +68,9 @@ Project relit = Project(
 Project financialMeet = Project(
   title: "FinancialMeet",
   shortDescription:
-      "Fullstack web app that connects people with financial advisors to reach their financial goals.",
+      "Fullstack web app that connects people with financial advisers to reach their financial goals",
   longDescription:
-      "A platform that helps users connect with financial advisors, to help them with their needs or financial goals.",
+      "A platform that helps users connect with financial advisers, to help them with their needs or financial goals.",
   logoImage: "assets/images/financial_meet/logo/logo.png",
   projectLink: [
     ProjectLink(
@@ -129,7 +129,7 @@ Project portfolio = Project(
 
 Project shade = Project(
   title: "Shade",
-  shortDescription: "Survival fighting game with 2D pixel art with Enemy AI.",
+  shortDescription: "Survival fighting game with Enemy AI",
   longDescription:
       "I wanted to build a game from scratch all by myself, I animated and designed all art and programmed the game to completion myself.",
   logoImage: "assets/images/shade/logo/logo.png",
