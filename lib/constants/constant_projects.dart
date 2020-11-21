@@ -97,34 +97,33 @@ Project financialMeet = Project(
 );
 
 Project portfolio = Project(
-  title: "My Portfolio",
-  shortDescription:
-      "My Portfolio (you're looking at right now! :D) Powered with Flutter Web.",
-  longDescription:
-      "My web portfolio built with flutter web. A place to showcase the projects that I love making during my spare time. If you'd like to see more of my professional work please have a look at my CV from the home screen.",
-  logoImage: "assets/images/portfolio/logo/logo.PNG",
-  projectLink: [
-    ProjectLink(
-      link: "https://github.com/renzoventura/myportfolio",
-      linkType: ProjectLinkType.GITHUB,
-      description: "Link to the source code",
-    ),
-  ],
-  technologies: [
-    FLUTTER,
-  ],
-  features: [
-    "Hosted webapp to Github Pages",
-    "Configure github pages to use a custom domain",
-    "Set up HTTPs",
-  ],
-  screenshots: [
-    "assets/images/portfolio/screenshots/1.PNG",
-    "assets/images/portfolio/screenshots/3.PNG",
-    "assets/images/portfolio/screenshots/6.PNG",
-    "assets/images/portfolio/screenshots/7.PNG",
-  ]
-);
+    title: "My Portfolio",
+    shortDescription:
+        "My Portfolio (you're looking at right now! :D) Powered with Flutter Web.",
+    longDescription:
+        "My web portfolio powered by Flutter Web. A place to showcase projects that I love making during my spare time. If you'd like to see more of my professional work please refer to my CV from the home screen.",
+    logoImage: "assets/images/portfolio/logo/logo.PNG",
+    projectLink: [
+      ProjectLink(
+        link: "https://github.com/renzoventura/myportfolio",
+        linkType: ProjectLinkType.GITHUB,
+        description: "Link to the source code",
+      ),
+    ],
+    technologies: [
+      FLUTTER,
+    ],
+    features: [
+      "Hosted the webapp to Github Pages",
+      "Configure github pages to use a custom domain name",
+      "Set up HTTPs",
+    ],
+    screenshots: [
+      "assets/images/portfolio/screenshots/1.PNG",
+      "assets/images/portfolio/screenshots/3.PNG",
+      "assets/images/portfolio/screenshots/6.PNG",
+      "assets/images/portfolio/screenshots/7.PNG",
+    ]);
 
 Project shade = Project(
   title: "Shade",
