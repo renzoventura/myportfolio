@@ -5,7 +5,7 @@ import 'package:sprintf/sprintf.dart';
 
 Project glowd = Project(
   title: "Glowd",
-  shortDescription: "IoT smart home cross platform iOS & Android controller",
+  shortDescription: "IoT smart home controller",
   longDescription:
       "An Internet of Things smart home controller. iOS/Android cross platform app that can control your Philips Hue lights integrated with the HUE API.",
   logoImage: "assets/images/glowd/logo/logo.png",
@@ -70,7 +70,7 @@ Project financialMeet = Project(
   shortDescription:
       "Fullstack web app that connects people with financial advisers to reach their financial goals",
   longDescription:
-      "A platform that helps users connect with financial advisers, to help them with their needs or financial goals.",
+      "A platform that helps users connect with financial advisers to help them reach their financial goals.",
   logoImage: "assets/images/financial_meet/logo/logo.png",
   projectLink: [
     ProjectLink(
@@ -131,7 +131,7 @@ Project shade = Project(
   title: "Shade",
   shortDescription: "Survival fighting game with Enemy AI",
   longDescription:
-      "I wanted to build a game from scratch all by myself, I animated and designed all art and programmed the game to completion myself.",
+      "2D survival fighting game with Enemy AI. Players must try their best to survive while being chased/attacked by enemies controlled by AI. A game that I made from scratch, designing and animating the art with pixel art to programming controls, animations, collisions and state machines.",
   logoImage: "assets/images/shade/logo/logo.png",
   projectLink: [
     ProjectLink(
