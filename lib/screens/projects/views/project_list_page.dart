@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myportfolio/constants/constant_projects.dart';
 import 'package:myportfolio/constants/constants.dart';
-import 'package:myportfolio/screens/projects/components/project_item_list.dart';
+import 'package:myportfolio/screens/projects/components/project_item.dart';
 import 'package:myportfolio/screens/title/components/contact_details.dart';
 
 class ProjectListPage extends StatelessWidget {
@@ -25,10 +25,6 @@ class ProjectListPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          // Icon(
-          //   Icons.arrow_drop_up_outlined,
-          //   size: arrowSize,
-          // ),
           Padding(
             padding: const EdgeInsets.only(
               top: kMarginXL,

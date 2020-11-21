@@ -17,6 +17,7 @@ class ProjectLinkTile extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: kMarginS),
@@ -25,11 +26,10 @@ class ProjectLinkTile extends StatelessWidget {
                   style: kBulletPoint,
                 ),
               ),
-              Text(
-                sprintf(COLON_FORMAT, [projectLink.linkType.getString()]),
-              ),
-              Text(
-                projectLink.description,
+              Expanded(
+                child: Text(
+                  sprintf(COLON_FORMAT, [projectLink.linkType.getString(), projectLink.description]),
+                ),
               ),
             ],
           ),

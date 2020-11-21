@@ -3,7 +3,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:myportfolio/constants/constants.dart';
 import 'package:myportfolio/screens/projects/views/project_list_page.dart';
-import 'package:myportfolio/screens/title/views/home_page.dart';
+import 'package:myportfolio/screens/title/views/title_screen.dart';
+import 'package:myportfolio/service/asset_utils.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class BaseScreen extends StatefulWidget {
   static const id = "/";
@@ -21,7 +23,7 @@ class _BaseScreenState extends State<BaseScreen> {
     final width = MediaQuery.of(context).size.width;
 
     bool updateOffsetAccordingToScroll(ScrollNotification scrollNotification) {
-      setState(() => offset = scrollNotification.metrics.pixels);
+      setState(() => offset = scrollNotification.metrics.pixels * scrollPixels);
       return true;
     }
 
@@ -35,19 +37,24 @@ class _BaseScreenState extends State<BaseScreen> {
             behavior: NoScrollGlow(),
             child: Stack(
               children: <Widget>[
-                //TODO: ADD BACKGROUND HERE
-                // Positioned(
-                //   top: -.25 * offset,
-                //   child: FadeInImage.memoryNetwork(
-                //     placeholder: kTransparentImage,
-                //     image: url,
-                //     height: height,
-                //     width: width,
-                //     fit: BoxFit.fitWidth,
-                //   ),
-                // ),
                 Positioned(
-                  top: -.25 * offset,
+                  height: height * titleScreenHeight,
+                  width: width,
+                  top: top * offset,
+                  child: FadeInImage(
+                    placeholder: MemoryImage(
+                      kTransparentImage,
+                    ),
+                    image: AssetImage(
+                      AssetUtils.background,
+                    ),
+                    height: height * titleScreenHeight,
+                    width: width,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Positioned(
+                  top: top * offset,
                   child: SizedBox(
                     height: height,
                     width: width,
@@ -58,9 +65,10 @@ class _BaseScreenState extends State<BaseScreen> {
                   ),
                 ),
                 SingleChildScrollView(
+                  physics: ClampingScrollPhysics(),
                   child: Column(
                     children: <Widget>[
-                      SizedBox(height: height * 0.78),
+                      SizedBox(height: height * sizedBox),
                       Container(
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.only(

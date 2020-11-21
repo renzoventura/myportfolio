@@ -19,6 +19,8 @@ dependencies:
   transparent_image: ^1.0.0
   delayed_display: ^1.0.3
   sliding_up_panel: ^1.0.2
+  flutter_full_pdf_viewer: ^1.0.6
+  path_provider: ^1.6.24
 
 dev_dependencies:
   flutter_test:
@@ -29,3 +31,22 @@ flutter:
   assets:
      - assets/
      - assets/images/
+     - assets/images/relit/
+     - assets/images/relit/logo/
+     - assets/images/relit/screenshots/
+     - assets/images/shade/
+     - assets/images/shade/logo/
+     - assets/images/shade/screenshots/
+     - assets/images/portfolio/
+     - assets/images/portfolio/logo/
+     - assets/images/portfolio/screenshots/
+     - assets/images/flutter_projects/
+     - assets/images/flutter_projects/logo/
+     - assets/images/flutter_projects/screenshots/
+     - assets/images/financial_meet/
+     - assets/images/financial_meet/logo/
+     - assets/images/financial_meet/screenshots/
+     - assets/images/glowd/
+     - assets/images/glowd/logo/
+     - assets/images/glowd/screenshots/
+     - assets/pdf/RENZO_VENTURA_CV.pdf

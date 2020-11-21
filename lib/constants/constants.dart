@@ -43,6 +43,9 @@ final kAnimatedTextStyle = TextStyle(
   color: Colors.white,
   letterSpacing: 3,
 );
+final kSubText = TextStyle(
+  fontSize: 12,
+);
 
 //font sizes min and max
 const double NAME_MIN_SIZE = 24;
@@ -77,7 +80,7 @@ final kBulletPoint = TextStyle(
   fontWeight: FontWeight.bold,
 );
 final kHyperLink = TextStyle(
-  fontSize: 18,
+  fontSize: 14,
   color: Colors.blue,
 );
 
@@ -113,10 +116,14 @@ const double projectTileLarge = 200;
 const double circleAvatarBackgroundMinRadius = 20.0;
 const double circleAvatarBackgroundMaxRadius = 106.0;
 const double arrowSize = 60.0;
+const double imageGaps = 20;
+const double screenShotMinHeight = 280;
+const double screenShotMinWidth = 80;
 
 //labels
-const String POSITION_TITLE = "SOFTWARE DEVELOPER";
+const String POSITION_TITLE = "FULLSTACK DEVELOPER";
 const String PORTFOLIO_NAME = "RENZO VENTURA";
+const String EMAIL = "renzoventura96@gmail.com";
 const String PROJECTS = "Projects";
 const String VIEW_ALL = "View All";
 const String GITHUB = "Github";
@@ -127,8 +134,9 @@ const String TECHNOLOGIES_USED = "Technologies Used:";
 const String FEATURES = "Features:";
 const String LINKS = "Links:";
 const String BULLET_POINT = "•";
-const String COLON_FORMAT = "%s : ";
+const String COLON_FORMAT = "%s : %s";
 const String SCROLL_DOWN = 'SCROLL DOWN FOR PROJECTS';
+
 //project types
 enum PROJECT_TYPE {
   FULLSTACK,
@@ -136,7 +144,7 @@ enum PROJECT_TYPE {
   FRONTEND,
   YOUTUBE,
   IOT,
-  APP,
+  MOBILE,
 }
 
 //project link types
@@ -158,6 +166,7 @@ const String AWS = "Amazon Web Services";
 const String MYSQL = "mySQL";
 const String HIBERNATE = "Hibernate";
 const String JPA = "Spring Data JPA";
+const String FIREBASE = "Firebase";
 
 //hero tags
 const String AVATAR_TAG = "avatar";
@@ -167,20 +176,55 @@ const String JOB_TITLE_TAG = "jobTitle";
 //url
 String kGithubUrl = "https://github.com/renzoventura";
 String kLinkedInUrl = "https://www.linkedin.com/in/renzoventura/";
+String kCVGoogleDriveUrl =
+    "https://docs.google.com/document/d/1IqrNjVRFOarXazkQxgBpLtOecg8Ry8KJNbrZq-gzXnw/export?format=pdf";
 
 //technologies display
 const List<String> kLanguages = [
   'A PROBLEM SOLVER 🤓',
-  'LOVES BUILDING APPS 📱',
-  'CAN ALSO DEVELOP APIS 💻',
+  'ENGINEERS APPS 📱',
+  'BUILDS APIS 💻',
   "GAME DEVELOPER BY NIGHT 👾",
   "A MARATHON RUNNER 🏃‍♂️",
 ];
 
 //about me
-const String ABOUT_ME_DESCRIPTION = "";
+const String ABOUT_ME_DESCRIPTION =
+    "A fullstack developer in the fintech space.";
+const String INTERESTS_DESCRIPTION =
+    "I am passionate about building products that accelerate organizational success.";
+
+const String NOTABLE = "Notable achievements that I've accomplished:";
+const List<String> ACHIEVEMENTS = [
+  'Developed a feature rich payment solution app',
+  'Developed a scalable automated test system. It resulted in improving my companies release process efficiency by 10% by automating regression testing and saw a significant decrease in bug raises by 15%!'
+];
+
+const String INTEREST = "When I'm not working on my side projects, I like to:";
 
 //timers
 const int tileHoverAnimationDuration = 300;
 const int textAnimationSpeed = 100;
 const int pageDelay = 2000;
+
+//size percentage
+const double scrollPixels = 1.5;
+const double titleScreenHeight = 0.8;
+const double sizedBox = 0.78;
+const double nameSizePercent = 0.08;
+const double jobTitleSizePercent = 0.03;
+const double bigRadiusHeightPercent = 1.15;
+const double bigRadiusWidthPercent = 1.1;
+const double bigRadiusAveragePercent = 0.09;
+const double smallRadiusHeightPercent = 1.25;
+const double smallRadiusWidthPercent = 1.1;
+const double two = 2;
+const double imagePercentage = 0.3;
+
+//position
+const double top = -.25;
+
+//url launcher email
+const String mailTo = "mailto";
+const String subject = "subject";
+const String email_subject = "Hi!";
