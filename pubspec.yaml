@@ -37,4 +37,7 @@ flutter:
      - assets/images/shade/
      - assets/images/shade/logo/
      - assets/images/shade/screenshots/
+     - assets/images/portfolio/
+     - assets/images/portfolio/logo/
+     - assets/images/portfolio/screenshots/
      - assets/pdf/RENZO_VENTURA_CV.pdf

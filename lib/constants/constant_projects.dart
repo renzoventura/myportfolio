@@ -104,7 +104,7 @@ Project portfolio = Project(
       "My Portfolio (you're looking at right now! :D) Powered with Flutter Web.",
   longDescription:
       "My web portfolio built with flutter web. A place to showcase the projects that I love making during my spare time. If you'd like to see more of my professional work please have a look at my CV from the home screen.",
-  logoImage: "",
+  logoImage: "assets/images/portfolio/logo/logo.PNG",
   projectLink: [
     ProjectLink(
       link: "https://github.com/renzoventura/myportfolio",
@@ -113,14 +113,23 @@ Project portfolio = Project(
     ),
   ],
   technologies: [
-    JAVA,
-    SPRING_BOOT,
-    AWS,
+    FLUTTER,
   ],
   features: [
-    "Feature 1",
-    "Feature 2",
+    "Hosted webapp to Github Pages",
+    "Configure github pages to use a custom domain",
+    "Set up HTTPs",
   ],
+  screenshots: [
+    "assets/images/portfolio/screenshots/1.PNG",
+    "assets/images/portfolio/screenshots/2.PNG",
+    "assets/images/portfolio/screenshots/3.PNG",
+    "assets/images/portfolio/screenshots/4.PNG",
+    "assets/images/portfolio/screenshots/5.PNG",
+    "assets/images/portfolio/screenshots/6.PNG",
+    "assets/images/portfolio/screenshots/7.PNG",
+    "assets/images/portfolio/screenshots/8.PNG",
+  ]
 );
 
 Project shade = Project(
