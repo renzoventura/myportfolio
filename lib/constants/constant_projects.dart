@@ -122,8 +122,8 @@ Project portfolio = Project(
     ],
     screenshots: [
       "assets/images/portfolio/screenshots/1.PNG",
-      "assets/images/portfolio/screenshots/3.PNG",
       "assets/images/portfolio/screenshots/6.PNG",
+      "assets/images/portfolio/screenshots/3.PNG",
       "assets/images/portfolio/screenshots/7.PNG",
     ]);
 
@@ -187,10 +187,10 @@ Project flutterBootCampProjects = Project(
 );
 
 List<Project> projects = [
-  glowd,
   financialMeet,
-  relit,
+  glowd,
   shade,
+  relit,
   portfolio,
   flutterBootCampProjects,
 ];

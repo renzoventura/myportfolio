@@ -36,47 +36,46 @@ class AboutPage extends StatelessWidget {
     List<Widget> achievements = [];
     ACHIEVEMENTS.forEach((text) => achievements.add(Text(text)));
 
-    List<Widget> aboutMeList = [                          Padding(
-      padding: EdgeInsets.only(top: kMarginS),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            "READ!",
-            style: kSubTitleTextStyle.copyWith(
-              fontSize: jobTitleSize,
+    List<Widget> aboutMeList = [
+      Padding(
+        padding: EdgeInsets.only(top: kMarginS),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "READ!",
+              style: kSubTitleTextStyle.copyWith(
+                fontSize: jobTitleSize,
+              ),
+              textAlign: TextAlign.start,
             ),
-            textAlign: TextAlign.start,
-          ),
-          Text(
-            "My favourite books are...",
-            textAlign: TextAlign.start,
-          ),
-          Padding(
-            padding:
-            EdgeInsets.symmetric(vertical: kMarginS),
-            child: Column(
-              crossAxisAlignment:
-              CrossAxisAlignment.start,
-              children: [
-                Text(
-                  '"The Obstacle is the way" by Ryan Holiday',
-                  textAlign: TextAlign.start,
-                ),
-                Text(
-                  '"11.22.63" by Stephen King',
-                  textAlign: TextAlign.start,
-                ),
-                Text(
-                  'The "Orphan X" series by Gregg Hurwitz',
-                  textAlign: TextAlign.start,
-                ),
-              ],
+            Text(
+              "My favourite books are...",
+              textAlign: TextAlign.start,
             ),
-          ),
-        ],
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: kMarginS),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    '"The Obstacle is the way" by Ryan Holiday',
+                    textAlign: TextAlign.start,
+                  ),
+                  Text(
+                    '"11.22.63" by Stephen King',
+                    textAlign: TextAlign.start,
+                  ),
+                  Text(
+                    'The "Orphan X" series by Gregg Hurwitz',
+                    textAlign: TextAlign.start,
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
-    ),
       Padding(
         padding: EdgeInsets.only(top: kMarginS),
         child: Column(
@@ -94,11 +93,9 @@ class AboutPage extends StatelessWidget {
               textAlign: TextAlign.start,
             ),
             Padding(
-              padding:
-              EdgeInsets.symmetric(vertical: kMarginS),
+              padding: EdgeInsets.symmetric(vertical: kMarginS),
               child: Column(
-                crossAxisAlignment:
-                CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     'Hollow Knight',
@@ -135,8 +132,7 @@ class AboutPage extends StatelessWidget {
               textAlign: TextAlign.start,
             ),
             Padding(
-              padding:
-              EdgeInsets.symmetric(vertical: kMarginS),
+              padding: EdgeInsets.symmetric(vertical: kMarginS),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -264,7 +260,8 @@ class AboutPage extends StatelessWidget {
                                   image: AssetImage(AssetUtils.marathon),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.symmetric(vertical: kMarginXS),
+                                  padding: const EdgeInsets.symmetric(
+                                      vertical: kMarginXS),
                                   child: Text(
                                     'Me running over the Harbour bridge',
                                     style: kSubText,
@@ -277,7 +274,6 @@ class AboutPage extends StatelessWidget {
                         ],
                       ),
                     ),
-
                   ],
                 ),
               ],

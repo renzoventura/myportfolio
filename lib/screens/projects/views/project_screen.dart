@@ -24,7 +24,7 @@ class ProjectScreen extends StatelessWidget {
     List<Widget> features = [];
     List<Widget> links = [];
     List<Widget> images = [];
-
+    List<Widget> featuresLinksAndTech = [];
     double screenShotHeight = height * imagePercentage;
     double screenShotWidth = width * imagePercentage;
 
@@ -34,29 +34,81 @@ class ProjectScreen extends StatelessWidget {
     if (screenShotWidth < screenShotMinHeight)
       screenShotWidth = screenShotMinHeight;
 
-    if(project.technologies != null)
-    project.technologies
-        .forEach((tech) => technologies.add(BulletPointText(tech)));
-    if(project.features != null)
-    project.features
-        .forEach((feature) => features.add(BulletPointText(feature)));
-    if(project.projectLink != null)
-    project.projectLink.forEach((link) => links.add(ProjectLinkTile(link)));
-    if(project.screenshots != null)
-    project.screenshots.forEach((image) => images.add(Container(
-          // height: double.infinity,
-          // width: double.infinity,
-          child: FadeInImage(
-            height: screenShotHeight,
-            width: screenShotWidth,
-            placeholder: MemoryImage(
-              kTransparentImage,
+    if (project.technologies != null)
+      project.technologies
+          .forEach((tech) => technologies.add(BulletPointText(tech)));
+    if (project.features != null)
+      project.features
+          .forEach((feature) => features.add(BulletPointText(feature)));
+    if (project.projectLink != null)
+      project.projectLink.forEach((link) => links.add(ProjectLinkTile(link)));
+    if (project.screenshots != null)
+      project.screenshots.forEach((image) => images.add(Container(
+            // height: double.infinity,
+            // width: double.infinity,
+            child: FadeInImage(
+              height: screenShotHeight,
+              width: screenShotWidth,
+              placeholder: MemoryImage(
+                kTransparentImage,
+              ),
+              image: AssetImage(
+                image,
+              ),
             ),
-            image: AssetImage(
-              image,
+          )));
+
+    if (features != null || features.isNotEmpty)
+      featuresLinksAndTech.add(Container(
+        padding: const EdgeInsets.symmetric(vertical: 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              FEATURES,
+              style: kTechnologiesUsedStyle,
             ),
-          ),
-        )));
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: features,
+            ),
+          ],
+        ),
+      ));
+    if (links != null || links.isNotEmpty)
+      featuresLinksAndTech.add(Container(
+        padding: const EdgeInsets.symmetric(vertical: 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              LINKS,
+              style: kTechnologiesUsedStyle,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: links,
+            ),
+          ],
+        ),
+      ));
+    if (technologies != null || technologies.isNotEmpty)
+      featuresLinksAndTech.add(Container(
+        padding: const EdgeInsets.symmetric(vertical: 0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              TECHNOLOGIES_USED,
+              style: kTechnologiesUsedStyle,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: technologies,
+            ),
+          ],
+        ),
+      ));
     return ScreenWidget(
       isBackButtonVisible: true,
       topPagePadding: kMarginS,
@@ -103,57 +155,15 @@ class ProjectScreen extends StatelessWidget {
                   SizedBox(
                     height: kMargin,
                   ),
-                  if (features != null || features.isNotEmpty)
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: kMarginXS),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            FEATURES,
-                            style: kTechnologiesUsedStyle,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: features,
-                          ),
-                        ],
-                      ),
+                  Center(
+                    child: Wrap(
+                      direction: Axis.horizontal,
+                      runAlignment: WrapAlignment.center,
+                      spacing: imageGaps,
+                      runSpacing: imageGaps,
+                      children: featuresLinksAndTech,
                     ),
-                  if (links != null || links.isNotEmpty)
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: kMarginXS),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            LINKS,
-                            style: kTechnologiesUsedStyle,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: links,
-                          ),
-                        ],
-                      ),
-                    ),
-                  if (technologies != null || technologies.isNotEmpty)
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: kMarginXS),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            TECHNOLOGIES_USED,
-                            style: kTechnologiesUsedStyle,
-                          ),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: technologies,
-                          ),
-                        ],
-                      ),
-                    ),
+                  ),
                   if (project.screenshots != null)
                     Center(
                       child: Wrap(
@@ -163,7 +173,10 @@ class ProjectScreen extends StatelessWidget {
                         runSpacing: imageGaps,
                         children: images,
                       ),
-                    )
+                    ),
+                  SizedBox(
+                    height: kMarginXXXXL,
+                  ),
                 ],
               ),
             ),
