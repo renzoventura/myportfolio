@@ -9,6 +9,7 @@ class Project {
   List<String> features;
   List<ProjectLink> projectLink;
   List<String> technologies;
+  List<String> screenshots;
 
   Project({
     @required this.title,
@@ -18,6 +19,7 @@ class Project {
     @required this.features,
     @required this.projectLink,
     @required this.technologies,
+    this.screenshots,
   });
 
   Project.fromJson(Map<String, dynamic> json) {
@@ -26,6 +28,7 @@ class Project {
     longDescription = json['longDescription'];
     logoImage = json['logoImage'];
     features = json['features'];
+    screenshots = json['screenshots'];
     if (json['ProjectLink'] != null) {
       projectLink = new List<ProjectLink>();
       json['ProjectLink'].forEach((v) {
@@ -42,6 +45,7 @@ class Project {
     data['longDescription'] = this.longDescription;
     data['logoImage'] = this.logoImage;
     data['features'] = this.features;
+    data['screenshots'] = this.screenshots;
     if (this.projectLink != null) {
       data['ProjectLink'] = this.projectLink.map((v) => v.toJson()).toList();
     }

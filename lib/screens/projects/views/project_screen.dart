@@ -6,6 +6,8 @@ import 'package:myportfolio/constants/constants.dart';
 import 'package:myportfolio/models/project.dart';
 import 'package:myportfolio/screens/projects/components/bullet_point_text.dart';
 import 'package:myportfolio/screens/projects/components/project_link_tile.dart';
+import 'package:transparent_image/transparent_image.dart';
+import 'package:myportfolio/extension/string_extension.dart';
 
 class ProjectScreen extends StatelessWidget {
   static const id = "/project/";
@@ -15,16 +17,42 @@ class ProjectScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
+
     List<Widget> technologies = [];
     List<Widget> features = [];
     List<Widget> links = [];
+    List<Widget> images = [];
+
+    double screenShotHeight = height * imagePercentage;
+    double screenShotWidth = width * imagePercentage;
+
+    if (screenShotHeight < screenShotMinHeight)
+      screenShotHeight = screenShotMinHeight;
+
+    if (screenShotWidth < screenShotMinHeight)
+      screenShotWidth = screenShotMinHeight;
 
     project.technologies
         .forEach((tech) => technologies.add(BulletPointText(tech)));
     project.features
         .forEach((feature) => features.add(BulletPointText(feature)));
     project.projectLink.forEach((link) => links.add(ProjectLinkTile(link)));
-
+    project.screenshots.forEach((image) => images.add(Container(
+          // height: double.infinity,
+          // width: double.infinity,
+          child: FadeInImage(
+            height: screenShotHeight,
+            width: screenShotWidth,
+            placeholder: MemoryImage(
+              kTransparentImage,
+            ),
+            image: AssetImage(
+              image,
+            ),
+          ),
+        )));
     return ScreenWidget(
       isBackButtonVisible: true,
       topPagePadding: kMarginXXL,
@@ -42,10 +70,17 @@ class ProjectScreen extends StatelessWidget {
                 children: <Widget>[
                   Center(
                     child: Container(
-                      child: Icon(
-                        CommunityMaterialIcons.github_box,
-                        size: projectTileLarge,
-                      ),
+                      child: project.logoImage.isNotNullAndNotEmpty()
+                          ? FadeInImage(
+                              height: projectTileLarge,
+                              width: projectTileLarge,
+                              placeholder: MemoryImage(kTransparentImage),
+                              image: AssetImage(project.logoImage),
+                            )
+                          : Icon(
+                              CommunityMaterialIcons.github_box,
+                              size: projectTileLarge,
+                            ),
                     ),
                   ),
                   SizedBox(
@@ -113,6 +148,16 @@ class ProjectScreen extends StatelessWidget {
                         ],
                       ),
                     ),
+                  if (project.screenshots != null)
+                    Center(
+                      child: Wrap(
+                        direction: Axis.horizontal,
+                        runAlignment: WrapAlignment.center,
+                        spacing: imageGaps,
+                        runSpacing: imageGaps,
+                        children: images,
+                      ),
+                    )
                 ],
               ),
             ),

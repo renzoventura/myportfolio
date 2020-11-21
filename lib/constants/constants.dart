@@ -113,6 +113,9 @@ const double projectTileLarge = 200;
 const double circleAvatarBackgroundMinRadius = 20.0;
 const double circleAvatarBackgroundMaxRadius = 106.0;
 const double arrowSize = 60.0;
+const double imageGaps = 20;
+const double screenShotMinHeight = 280;
+const double screenShotMinWidth = 80;
 
 //labels
 const String POSITION_TITLE = "FULLSTACK DEVELOPER";
@@ -217,6 +220,7 @@ const double bigRadiusAveragePercent = 0.09;
 const double smallRadiusHeightPercent = 1.25;
 const double smallRadiusWidthPercent = 1.1;
 const double two = 2;
+const double imagePercentage = 0.3;
 
 //position
 const double top = -.25;

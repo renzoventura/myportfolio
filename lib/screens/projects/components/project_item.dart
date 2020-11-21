@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:myportfolio/constants/constants.dart';
 import 'package:myportfolio/models/project.dart';
 import 'package:myportfolio/screens/projects/views/project_screen.dart';
+import 'package:transparent_image/transparent_image.dart';
+import 'package:myportfolio/extension/string_extension.dart';
 
 class ProjectItem extends StatefulWidget {
   final Project project;
@@ -24,14 +26,14 @@ class _ProjectItemState extends State<ProjectItem> {
     textSize > PROJECT_TILE_FONT_MAX_SIZE
         ? textSize = PROJECT_TILE_FONT_MAX_SIZE
         : textSize < PROJECT_TILE_FONT_MIN_SIZE
-        ? textSize = PROJECT_TILE_FONT_MIN_SIZE
-        : textSize = textSize;
+            ? textSize = PROJECT_TILE_FONT_MIN_SIZE
+            : textSize = textSize;
 
     iconSize > PROJECT_ICON_FONT_MAX_SIZE
         ? iconSize = PROJECT_ICON_FONT_MAX_SIZE
         : iconSize < PROJECT_ICON_FONT_MIN_SIZE
-        ? iconSize = PROJECT_ICON_FONT_MIN_SIZE
-        : iconSize = iconSize;
+            ? iconSize = PROJECT_ICON_FONT_MIN_SIZE
+            : iconSize = iconSize;
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: kMarginS),
       child: InkWell(
@@ -63,14 +65,18 @@ class _ProjectItemState extends State<ProjectItem> {
             children: <Widget>[
               Expanded(
                 flex: 1,
-                child: Hero(
-                  tag: widget.project.logoImage,
-                  child: Container(
-                    child: Icon(
-                      CommunityMaterialIcons.github_box,
-                      size: iconSize,
-                    ),
-                  ),
+                child: Container(
+                  child: widget.project.logoImage.isNotNullAndNotEmpty()
+                      ? FadeInImage(
+                          height: iconSize,
+                          width: iconSize,
+                          placeholder: MemoryImage(kTransparentImage),
+                          image: AssetImage(widget.project.logoImage),
+                        )
+                      : Icon(
+                          CommunityMaterialIcons.github_box,
+                          size: iconSize,
+                        ),
                 ),
               ),
               SizedBox(
@@ -83,7 +89,8 @@ class _ProjectItemState extends State<ProjectItem> {
                   children: <Widget>[
                     Text(
                       widget.project.title,
-                      style: kProjectPageTitleStyle.copyWith(fontSize: textSize),
+                      style:
+                          kProjectPageTitleStyle.copyWith(fontSize: textSize),
                     ),
                     Text(
                       widget.project.shortDescription,

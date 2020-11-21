@@ -7,7 +7,7 @@ Project glowd = Project(
   shortDescription: "IoT smart home cross platform iOS & Android controller",
   longDescription:
       "Built with Flutter, this is an Internet of Things smart home controller. Cross platform between iOS and Android that can control your Philips Hue lights integrated with the HUE API.",
-  logoImage: "glowdFilePath",
+  logoImage: "",
   projectLink: [
     ProjectLink(
       link: "https://github.com/renzoventura/glowd",
@@ -32,7 +32,7 @@ Project relit = Project(
   shortDescription: "2D collision based platformer browser game",
   longDescription:
       "Built using the Godot Game Engine, A 2D platformer game that can interact with different environments based on current state.",
-  logoImage: "relitFilePath",
+  logoImage: "assets/images/relit/logo/logo.png",
   features: [
     "Players can changes states between light and dark to solve fun and challenging levels.",
     "Has easy to use UI",
@@ -55,6 +55,12 @@ Project relit = Project(
     GODOT,
     GD_SCRIPT,
   ],
+  screenshots: [
+    "assets/images/relit/screenshots/1.PNG",
+    "assets/images/relit/screenshots/2.PNG",
+    "assets/images/relit/screenshots/3.PNG",
+    "assets/images/relit/screenshots/4.PNG",
+  ],
 );
 
 Project financialMeet = Project(
@@ -63,7 +69,7 @@ Project financialMeet = Project(
       "Fullstack web app that connects people with financial advisors to reach their financial goals.",
   longDescription:
       "A platform that helps users connect with financial advisors, to help them with their needs or financial goals.",
-  logoImage: "financialMeetFilePath",
+  logoImage: "",
   projectLink: [
     ProjectLink(
       link: "https://github.com/renzoventura/financial-meet",
@@ -98,7 +104,7 @@ Project portfolio = Project(
       "My Portfolio (you're looking at right now! :D) Powered with Flutter Web.",
   longDescription:
       "My web portfolio built with flutter web. A place to showcase the projects that I love making during my spare time. If you'd like to see more of my professional work please have a look at my CV from the home screen.",
-  logoImage: "portfolioFilePath",
+  logoImage: "",
   projectLink: [
     ProjectLink(
       link: "https://github.com/renzoventura/myportfolio",
@@ -122,7 +128,7 @@ Project shade = Project(
   shortDescription: "Survival fighting game with 2D pixel art with Enemy AI.",
   longDescription:
       "I wanted to build a game from scratch all by myself, I animated and designed all art and programmed the game to completion myself.",
-  logoImage: "shadefilePath",
+  logoImage: "assets/images/shade/logo/logo.png",
   projectLink: [
     ProjectLink(
       link: "https://github.com/renzoventura/Shade",
@@ -146,6 +152,12 @@ Project shade = Project(
     "Animation with collision",
     "Easy UI",
   ],
+  screenshots: [
+    "assets/images/shade/screenshots/1.PNG",
+    "assets/images/shade/screenshots/2.PNG",
+    "assets/images/shade/screenshots/3.PNG",
+    "assets/images/shade/screenshots/4.PNG",
+  ],
 );
 
 Project flutterBootCampProjects = Project(
@@ -154,7 +166,7 @@ Project flutterBootCampProjects = Project(
       "Projects I made during the 2020 Flutter Development Bootcamp",
   longDescription:
       "Projects I made during the 2020 Flutter Development Bootcamp that consist of \n- Exchange rate app \n- BMI calculator \n- Instant messaging using firebase \n- To do List \n- Weather App",
-  logoImage: "flutterBootCampProjectsPath",
+  logoImage: "",
   projectLink: [
     ProjectLink(
       link: "https://github.com/renzoventura/FlutterBootcampProjects",
