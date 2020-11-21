@@ -44,7 +44,7 @@ final kAnimatedTextStyle = TextStyle(
   letterSpacing: 3,
 );
 final kSubText = TextStyle(
-  fontSize: 8,
+  fontSize: 12,
 );
 
 //font sizes min and max
@@ -176,13 +176,14 @@ const String JOB_TITLE_TAG = "jobTitle";
 //url
 String kGithubUrl = "https://github.com/renzoventura";
 String kLinkedInUrl = "https://www.linkedin.com/in/renzoventura/";
-String kCVGoogleDriveUrl = "https://docs.google.com/document/d/1IqrNjVRFOarXazkQxgBpLtOecg8Ry8KJNbrZq-gzXnw/export?format=pdf";
+String kCVGoogleDriveUrl =
+    "https://docs.google.com/document/d/1IqrNjVRFOarXazkQxgBpLtOecg8Ry8KJNbrZq-gzXnw/export?format=pdf";
 
 //technologies display
 const List<String> kLanguages = [
   'A PROBLEM SOLVER 🤓',
-  'LOVES BUILDING APPS 📱',
-  'CAN ALSO DEVELOP APIS 💻',
+  'ENGINEERS APPS 📱',
+  'BUILDS APIS 💻',
   "GAME DEVELOPER BY NIGHT 👾",
   "A MARATHON RUNNER 🏃‍♂️",
 ];
@@ -213,7 +214,7 @@ const double sizedBox = 0.78;
 const double nameSizePercent = 0.08;
 const double jobTitleSizePercent = 0.03;
 const double bigRadiusHeightPercent = 1.15;
-const double bigRadiusWidthPercent =1.1;
+const double bigRadiusWidthPercent = 1.1;
 const double bigRadiusAveragePercent = 0.09;
 const double smallRadiusHeightPercent = 1.25;
 const double smallRadiusWidthPercent = 1.1;

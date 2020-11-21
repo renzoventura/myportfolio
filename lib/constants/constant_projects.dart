@@ -112,6 +112,7 @@ Project portfolio = Project(
     ],
     technologies: [
       FLUTTER,
+      DART,
     ],
     features: [
       "Hosted the webapp to Github Pages",
