@@ -40,4 +40,7 @@ flutter:
      - assets/images/portfolio/
      - assets/images/portfolio/logo/
      - assets/images/portfolio/screenshots/
+     - assets/images/flutter_projects/
+     - assets/images/flutter_projects/logo/
+     - assets/images/flutter_projects/screenshots/
      - assets/pdf/RENZO_VENTURA_CV.pdf

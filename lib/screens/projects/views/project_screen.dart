@@ -34,11 +34,15 @@ class ProjectScreen extends StatelessWidget {
     if (screenShotWidth < screenShotMinHeight)
       screenShotWidth = screenShotMinHeight;
 
+    if(project.technologies != null)
     project.technologies
         .forEach((tech) => technologies.add(BulletPointText(tech)));
+    if(project.features != null)
     project.features
         .forEach((feature) => features.add(BulletPointText(feature)));
+    if(project.projectLink != null)
     project.projectLink.forEach((link) => links.add(ProjectLinkTile(link)));
+    if(project.screenshots != null)
     project.screenshots.forEach((image) => images.add(Container(
           // height: double.infinity,
           // width: double.infinity,

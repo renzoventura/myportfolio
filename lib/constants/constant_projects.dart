@@ -122,13 +122,9 @@ Project portfolio = Project(
   ],
   screenshots: [
     "assets/images/portfolio/screenshots/1.PNG",
-    "assets/images/portfolio/screenshots/2.PNG",
     "assets/images/portfolio/screenshots/3.PNG",
-    "assets/images/portfolio/screenshots/4.PNG",
-    "assets/images/portfolio/screenshots/5.PNG",
     "assets/images/portfolio/screenshots/6.PNG",
     "assets/images/portfolio/screenshots/7.PNG",
-    "assets/images/portfolio/screenshots/8.PNG",
   ]
 );
 
@@ -175,7 +171,7 @@ Project flutterBootCampProjects = Project(
       "Projects I made during the 2020 Flutter Development Bootcamp",
   longDescription:
       "Projects I made during the 2020 Flutter Development Bootcamp that consist of \n- Exchange rate app \n- BMI calculator \n- Instant messaging using firebase \n- To do List \n- Weather App",
-  logoImage: "",
+  logoImage: "assets/images/flutter_projects/logo/logo.png",
   projectLink: [
     ProjectLink(
       link: "https://github.com/renzoventura/FlutterBootcampProjects",
