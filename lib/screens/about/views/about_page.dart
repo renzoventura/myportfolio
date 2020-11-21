@@ -35,8 +35,6 @@ class AboutPage extends StatelessWidget {
             : jobTitleSize = jobTitleSize;
     List<Widget> achievements = [];
     ACHIEVEMENTS.forEach((text) => achievements.add(Text(text)));
-    List<Widget> interests = [];
-    INTERESTS.forEach((text) => interests.add(Text(text)));
     return ScreenWidget(
       isBackButtonVisible: true,
       child: Center(
@@ -58,7 +56,7 @@ class AboutPage extends StatelessWidget {
                       tag: NAME_TAG,
                       text: PORTFOLIO_NAME,
                       style: kTitleTextStyle.copyWith(fontSize: nameSize),
-                      align: TextAlign.center,
+                      align: TextAlign.start,
                     ),
                     HeroText(
                       tag: JOB_TITLE_TAG,
@@ -66,7 +64,7 @@ class AboutPage extends StatelessWidget {
                       style: kSubTitleTextStyle.copyWith(
                         fontSize: jobTitleSize,
                       ),
-                      align: TextAlign.center,
+                      align: TextAlign.start,
                     ),
                     SizedBox(
                       height: kMargin,
@@ -100,8 +98,7 @@ class AboutPage extends StatelessWidget {
                             child: Text(
                               EMAIL,
                               style: kHyperLink.copyWith(
-                                fontWeight: FontWeight.w700
-                              ),
+                                  fontWeight: FontWeight.w700),
                             ),
                           ),
                         ),
@@ -126,33 +123,127 @@ class AboutPage extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: kMarginL),
-                      child: Column(
+                      padding: const EdgeInsets.only(top: kMarginS),
+                      child: Wrap(
+                        direction: Axis.horizontal,
+                        runAlignment: WrapAlignment.center,
+                        spacing: imageGaps,
+                        runSpacing: imageGaps,
                         children: [
-                          Text(
-                            "RUN!",
-                            style: kSubTitleTextStyle.copyWith(
-                              fontSize: jobTitleSize,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                          Text(
-                            "I recently ran my first marathon at The 2020 ASB Marathon!",
-                            textAlign: TextAlign.center,
-                          ),
                           Padding(
-                            padding: EdgeInsets.symmetric(vertical: kMarginS),
+                            padding: EdgeInsets.only(top: kMarginS),
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                FadeInImage(
-                                  height: height * 0.3,
-                                  placeholder: MemoryImage(kTransparentImage),
-                                  image: AssetImage(AssetUtils.marathon),
+                                Text(
+                                  "READ!",
+                                  style: kSubTitleTextStyle.copyWith(
+                                    fontSize: jobTitleSize,
+                                  ),
+                                  textAlign: TextAlign.start,
                                 ),
                                 Text(
-                                  'Me, running over the Harbour bridge',
-                                  style: kProjectPageDescription,
-                                  textAlign: TextAlign.center,
+                                  "My favourite books are...",
+                                  textAlign: TextAlign.start,
+                                ),
+                                Padding(
+                                  padding:
+                                      EdgeInsets.symmetric(vertical: kMarginS),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        '"The Obstacle is the way" by Ryan Holiday',
+                                        textAlign: TextAlign.start,
+                                      ),
+                                      Text(
+                                        '"11.22.63" by Stephen King',
+                                        textAlign: TextAlign.start,
+                                      ),
+                                      Text(
+                                        'The "Orphan X" series by Gregg Hurwitz',
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: kMarginS),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "PLAY GAMES!",
+                                  style: kSubTitleTextStyle.copyWith(
+                                    fontSize: jobTitleSize,
+                                  ),
+                                  textAlign: TextAlign.start,
+                                ),
+                                Text(
+                                  "My favourite games are...",
+                                  textAlign: TextAlign.start,
+                                ),
+                                Padding(
+                                  padding:
+                                      EdgeInsets.symmetric(vertical: kMarginS),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Hollow Knight',
+                                        textAlign: TextAlign.start,
+                                      ),
+                                      Text(
+                                        "The 'Dark Souls' Series",
+                                        textAlign: TextAlign.start,
+                                      ),
+                                      Text(
+                                        "The 'Megaman' series",
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: kMarginS),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "RUN!",
+                                  style: kSubTitleTextStyle.copyWith(
+                                    fontSize: jobTitleSize,
+                                  ),
+                                  textAlign: TextAlign.start,
+                                ),
+                                Text(
+                                  "I love running to clear my mind...",
+                                  textAlign: TextAlign.start,
+                                ),
+                                Padding(
+                                  padding:
+                                      EdgeInsets.symmetric(vertical: kMarginS),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "I ran my first full marathon",
+                                        textAlign: TextAlign.start,
+                                      ),
+                                      Text(
+                                        "at the 2020 ASB Auckland Marathon!",
+                                        textAlign: TextAlign.start,
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ],
                             ),
@@ -161,78 +252,20 @@ class AboutPage extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(top: kMarginL),
+                      padding: EdgeInsets.symmetric(vertical: kMarginS),
                       child: Column(
                         children: [
-                          Text(
-                            "READ!",
-                            style: kSubTitleTextStyle.copyWith(
-                              fontSize: jobTitleSize,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                          Text(
-                            "My favourite books are...",
-                            textAlign: TextAlign.center,
+                          FadeInImage(
+                            height: height * 0.3,
+                            placeholder: MemoryImage(kTransparentImage),
+                            image: AssetImage(AssetUtils.marathon),
                           ),
                           Padding(
-                            padding: EdgeInsets.symmetric(vertical: kMarginS),
-                            child: Column(
-                              children: [
-                                Text(
-                                  '"The Obstacle is the way" by Ryan Holiday',
-                                  textAlign: TextAlign.center,
-                                ),
-                                Text(
-                                  '"11.22.63" by Stephen King',
-                                  textAlign: TextAlign.center,
-                                ),
-                                Text(
-                                  'The "Orphan X" series by Gregg Hurwitz',
-                                  textAlign: TextAlign.center,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: kMarginL),
-                      child: Column(
-                        children: [
-                          Text(
-                            "PLAY GAMES!",
-                            style: kSubTitleTextStyle.copyWith(
-                              fontSize: jobTitleSize,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                          Text(
-                            "My favourite games are...",
-                            textAlign: TextAlign.center,
-                          ),
-                          Padding(
-                            padding: EdgeInsets.symmetric(vertical: kMarginS),
-                            child: Column(
-                              children: [
-                                Text(
-                                  'Hollow Knight',
-                                  textAlign: TextAlign.center,
-                                ),
-                                Text(
-                                  "The 'Dark Souls' Series",
-                                  textAlign: TextAlign.center,
-                                ),
-                                Text(
-                                  "The 'Megaman' series",
-                                  textAlign: TextAlign.center,
-                                ),
-                                Text(
-                                  "These days I've actually made my own games, check them out in the projects section!",
-                                  textAlign: TextAlign.center,
-                                )
-                              ],
+                            padding: const EdgeInsets.symmetric(vertical: kMarginXS),
+                            child: Text(
+                              'Running over the Harbour bridge',
+                              style: kSubText,
+                              textAlign: TextAlign.start,
                             ),
                           ),
                         ],

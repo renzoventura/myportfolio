@@ -1,13 +1,14 @@
 import 'package:myportfolio/constants/constants.dart';
 import 'package:myportfolio/models/project.dart';
 import 'package:myportfolio/models/project_link.dart';
+import 'package:sprintf/sprintf.dart';
 
 Project glowd = Project(
   title: "Glowd",
   shortDescription: "IoT smart home cross platform iOS & Android controller",
   longDescription:
-      "Built with Flutter, this is an Internet of Things smart home controller. Cross platform between iOS and Android that can control your Philips Hue lights integrated with the HUE API.",
-  logoImage: "",
+      "An Internet of Things smart home controller. iOS/Android cross platform app that can control your Philips Hue lights integrated with the HUE API.",
+  logoImage: "assets/images/glowd/logo/logo.png",
   projectLink: [
     ProjectLink(
       link: "https://github.com/renzoventura/glowd",
@@ -31,12 +32,12 @@ Project relit = Project(
   title: "Relit",
   shortDescription: "2D collision based platformer browser game",
   longDescription:
-      "Built using the Godot Game Engine, A 2D platformer game that can interact with different environments based on current state.",
+      "2D pixel art platformer game. Players can interact with different environments based on toggleable current states.",
   logoImage: "assets/images/relit/logo/logo.png",
   features: [
     "Players can changes states between light and dark to solve fun and challenging levels.",
     "Has easy to use UI",
-    "Collaborated with a musician and designer to build our first game",
+    "Collaborated with a musician and artist to build our first game",
     "Submitted to 'MY FIRST GAME JAM 2020'",
   ],
   projectLink: [
@@ -69,7 +70,7 @@ Project financialMeet = Project(
       "Fullstack web app that connects people with financial advisors to reach their financial goals.",
   longDescription:
       "A platform that helps users connect with financial advisors, to help them with their needs or financial goals.",
-  logoImage: "",
+  logoImage: "assets/images/financial_meet/logo/logo.png",
   projectLink: [
     ProjectLink(
       link: "https://github.com/renzoventura/financial-meet",
@@ -83,11 +84,8 @@ Project financialMeet = Project(
     ),
   ],
   technologies: [
-    JAVA,
-    SPRING_BOOT,
-    MYSQL,
-    HIBERNATE,
-    JPA,
+    sprintf("%s with %s", [JAVA, SPRING_BOOT]),
+    sprintf("%s, %s, %s", [MYSQL, HIBERNATE, JPA]),
     ANGULAR7,
     AWS,
   ],

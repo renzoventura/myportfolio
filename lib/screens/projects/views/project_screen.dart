@@ -59,7 +59,7 @@ class ProjectScreen extends StatelessWidget {
         )));
     return ScreenWidget(
       isBackButtonVisible: true,
-      topPagePadding: kMarginXXL,
+      topPagePadding: kMarginS,
       child: Center(
         child: Container(
           child: ConstrainedBox(
@@ -68,27 +68,29 @@ class ProjectScreen extends StatelessWidget {
               maxWidth: maxWidthPage,
             ),
             child: Container(
-              padding: EdgeInsets.all(kMarginS),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Center(
-                    child: Container(
-                      child: project.logoImage.isNotNullAndNotEmpty()
-                          ? FadeInImage(
-                              height: projectTileLarge,
-                              width: projectTileLarge,
-                              placeholder: MemoryImage(kTransparentImage),
-                              image: AssetImage(project.logoImage),
-                            )
-                          : Icon(
-                              CommunityMaterialIcons.github_box,
-                              size: projectTileLarge,
-                            ),
+                    child: Hero(
+                      tag: project.logoImage,
+                      child: Container(
+                        child: project.logoImage.isNotNullAndNotEmpty()
+                            ? FadeInImage(
+                                height: projectTileLarge,
+                                width: projectTileLarge,
+                                placeholder: MemoryImage(kTransparentImage),
+                                image: AssetImage(project.logoImage),
+                              )
+                            : Icon(
+                                CommunityMaterialIcons.github_box,
+                                size: projectTileLarge,
+                              ),
+                      ),
                     ),
                   ),
                   SizedBox(
-                    height: kMarginL,
+                    height: kMargin,
                   ),
                   Text(
                     project.title,
@@ -99,11 +101,11 @@ class ProjectScreen extends StatelessWidget {
                     style: kProjectPageDescription,
                   ),
                   SizedBox(
-                    height: kMarginL,
+                    height: kMargin,
                   ),
                   if (features != null || features.isNotEmpty)
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: kMarginL),
+                      padding: const EdgeInsets.symmetric(vertical: kMarginXS),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -120,7 +122,7 @@ class ProjectScreen extends StatelessWidget {
                     ),
                   if (links != null || links.isNotEmpty)
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: kMarginL),
+                      padding: const EdgeInsets.symmetric(vertical: kMarginXS),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -137,7 +139,7 @@ class ProjectScreen extends StatelessWidget {
                     ),
                   if (technologies != null || technologies.isNotEmpty)
                     Padding(
-                      padding: const EdgeInsets.symmetric(vertical: kMarginL),
+                      padding: const EdgeInsets.symmetric(vertical: kMarginXS),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [

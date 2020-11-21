@@ -43,6 +43,9 @@ final kAnimatedTextStyle = TextStyle(
   color: Colors.white,
   letterSpacing: 3,
 );
+final kSubText = TextStyle(
+  fontSize: 8,
+);
 
 //font sizes min and max
 const double NAME_MIN_SIZE = 24;
@@ -77,7 +80,7 @@ final kBulletPoint = TextStyle(
   fontWeight: FontWeight.bold,
 );
 final kHyperLink = TextStyle(
-  fontSize: 18,
+  fontSize: 14,
   color: Colors.blue,
 );
 
@@ -131,7 +134,7 @@ const String TECHNOLOGIES_USED = "Technologies Used:";
 const String FEATURES = "Features:";
 const String LINKS = "Links:";
 const String BULLET_POINT = "•";
-const String COLON_FORMAT = "%s : ";
+const String COLON_FORMAT = "%s : %s";
 const String SCROLL_DOWN = 'SCROLL DOWN FOR PROJECTS';
 
 //project types
@@ -141,7 +144,7 @@ enum PROJECT_TYPE {
   FRONTEND,
   YOUTUBE,
   IOT,
-  APP,
+  MOBILE,
 }
 
 //project link types
@@ -197,11 +200,6 @@ const List<String> ACHIEVEMENTS = [
 ];
 
 const String INTEREST = "When I'm not working on my side projects, I like to:";
-const List<String> INTERESTS = [
-  'Reading! My favourite books are "The Obstacle is the way" by Ryan Holiday", "11.22.63" by Stephen King and the "Orphan X" series by Gregg Hurwitz',
-  'Running! I ran my first full marathon at the ASB Marathon 2020.',
-  'Play Games!, My favourite games are "Hollow Knight" and the "Dark Souls" Series',
-];
 
 //timers
 const int tileHoverAnimationDuration = 300;

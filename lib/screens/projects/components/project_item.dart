@@ -65,18 +65,21 @@ class _ProjectItemState extends State<ProjectItem> {
             children: <Widget>[
               Expanded(
                 flex: 1,
-                child: Container(
-                  child: widget.project.logoImage.isNotNullAndNotEmpty()
-                      ? FadeInImage(
-                          height: iconSize,
-                          width: iconSize,
-                          placeholder: MemoryImage(kTransparentImage),
-                          image: AssetImage(widget.project.logoImage),
-                        )
-                      : Icon(
-                          CommunityMaterialIcons.github_box,
-                          size: iconSize,
-                        ),
+                child: Hero(
+                  tag: widget.project.logoImage,
+                  child: Container(
+                    child: widget.project.logoImage.isNotNullAndNotEmpty()
+                        ? FadeInImage(
+                            height: iconSize,
+                            width: iconSize,
+                            placeholder: MemoryImage(kTransparentImage),
+                            image: AssetImage(widget.project.logoImage),
+                          )
+                        : Icon(
+                            CommunityMaterialIcons.github_box,
+                            size: iconSize,
+                          ),
+                  ),
                 ),
               ),
               SizedBox(

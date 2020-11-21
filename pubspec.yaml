@@ -43,4 +43,10 @@ flutter:
      - assets/images/flutter_projects/
      - assets/images/flutter_projects/logo/
      - assets/images/flutter_projects/screenshots/
+     - assets/images/financial_meet/
+     - assets/images/financial_meet/logo/
+     - assets/images/financial_meet/screenshots/
+     - assets/images/glowd/
+     - assets/images/glowd/logo/
+     - assets/images/glowd/screenshots/
      - assets/pdf/RENZO_VENTURA_CV.pdf
