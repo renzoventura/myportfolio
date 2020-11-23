@@ -18,6 +18,8 @@ extension ProjectLinkTypeExtension on ProjectLinkType {
         return "GitHub";
       case ProjectLinkType.DEMO:
         return "Demo";
+      case ProjectLinkType.YOUTUBE:
+        return "Youtube";
     }
     return "";
   }

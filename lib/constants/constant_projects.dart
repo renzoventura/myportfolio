@@ -15,6 +15,11 @@ Project glowd = Project(
       linkType: ProjectLinkType.GITHUB,
       description: "Link to source code",
     ),
+    ProjectLink(
+      link: "https://www.youtube.com/watch?v=RqzMY5_oiWc",
+      linkType: ProjectLinkType.YOUTUBE,
+      description: "WATCH LIVE DEMO",
+    ),
   ],
   technologies: [
     DART,
@@ -26,6 +31,13 @@ Project glowd = Project(
     "Can turn on/off all lights in a room.",
     "Update light brightness, state and colors.",
   ],
+  screenshots: [
+    "assets/images/glowd/screenshots/5.PNG",
+    "assets/images/glowd/screenshots/1.PNG",
+    "assets/images/glowd/screenshots/3.PNG",
+    "assets/images/glowd/screenshots/4.PNG",
+  ],
+  demoVideoLink: "",
 );
 
 Project relit = Project(
@@ -187,8 +199,8 @@ Project flutterBootCampProjects = Project(
 );
 
 List<Project> projects = [
-  financialMeet,
   glowd,
+  financialMeet,
   shade,
   relit,
   portfolio,

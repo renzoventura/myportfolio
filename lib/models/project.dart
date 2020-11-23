@@ -6,6 +6,7 @@ class Project {
   String shortDescription;
   String longDescription;
   String logoImage;
+  String demoVideoLink;
   List<String> features;
   List<ProjectLink> projectLink;
   List<String> technologies;
@@ -20,6 +21,7 @@ class Project {
     @required this.projectLink,
     @required this.technologies,
     this.screenshots,
+    this.demoVideoLink,
   });
 
   Project.fromJson(Map<String, dynamic> json) {
@@ -36,6 +38,7 @@ class Project {
       });
     }
     technologies = json['technologies'];
+    demoVideoLink = json['demoVideoLink'];
   }
 
   Map<String, dynamic> toJson() {
@@ -50,6 +53,7 @@ class Project {
       data['ProjectLink'] = this.projectLink.map((v) => v.toJson()).toList();
     }
     data['technologies'] = this.technologies;
+    data['demoVideoLink'] = this.demoVideoLink;
     return data;
   }
 }

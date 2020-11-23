@@ -151,6 +151,7 @@ enum PROJECT_TYPE {
 enum ProjectLinkType {
   GITHUB,
   DEMO,
+  YOUTUBE,
 }
 
 //technologies
