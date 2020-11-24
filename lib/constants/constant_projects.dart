@@ -33,9 +33,10 @@ Project glowd = Project(
   ],
   screenshots: [
     "assets/images/glowd/screenshots/5.PNG",
-    "assets/images/glowd/screenshots/1.PNG",
-    "assets/images/glowd/screenshots/3.PNG",
+    "assets/images/glowd/screenshots/2.PNG",
     "assets/images/glowd/screenshots/4.PNG",
+    "assets/images/glowd/screenshots/3.PNG",
+    "assets/images/glowd/screenshots/1.PNG",
   ],
   demoVideoLink: "",
 );
